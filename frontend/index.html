@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Set Archive</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>DJ Set Archive</h1>
+
+        <p>Lokale Entwicklungsbasis · Anmeldung und Freigaben folgen.</p>
+        <h2>Track erfassen oder bearbeiten</h2>
+
+        <div class="create-form">
+
+            <input
+                type="hidden"
+                id="trackId"
+            >
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Titel"
+            >
+
+            <input
+                type="text"
+                id="artist"
+                placeholder="Artist"
+            >
+
+            <input
+                type="text"
+                id="genre"
+                placeholder="Genre"
+            >
+
+            <input
+                type="number"
+                id="bpm"
+                placeholder="BPM"
+            >
+
+            <input
+                type="text"
+                id="key"
+                placeholder="Tonart"
+            >
+
+            <input
+                type="text"
+                id="status"
+                placeholder="Status"
+            >
+
+            <button onclick="createTrack()">
+                Speichern
+            </button>
+
+        </div>
+
+        <hr>
+
+        <h2>Tracks suchen</h2>
+
+        <div class="filter-box">
+
+            <input
+                type="text"
+                id="titleInput"
+                placeholder="Trackname"
+            >
+
+            <input
+                type="text"
+                id="artistInput"
+                placeholder="Artist"
+            >
+
+            <input
+                type="text"
+                id="genreInput"
+                placeholder="Genre"
+            >
+
+            <input
+                type="text"
+                id="keyInput"
+                placeholder="Tonart"
+            >
+
+            <input
+                type="number"
+                id="minBpmInput"
+                placeholder="BPM von"
+            >
+
+            <input
+                type="number"
+                id="maxBpmInput"
+                placeholder="BPM bis"
+            >
+
+            <button onclick="loadTracks()">
+                Suchen
+            </button>
+
+        </div>
+
+        <div id="trackList"></div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111827;
+    color: white;
+
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.create-form,
+.filter-box {
+    margin-bottom: 20px;
+
+    display: flex;
+    gap: 10px;
+}
+
+.create-form input,
+.filter-box input {
+    flex: 1;
+}
+
+input {
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+
+    min-width: 120px;
+}
+
+.track-card {
+    background: #1f2937;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.track-card button {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.track-card a {
+    color: #93c5fd;
+}
+* { box-sizing: border-box; }
+.container { width: 100%; max-width: 1200px; padding: 24px; }
+.create-form, .filter-box { flex-wrap: wrap; }
+.create-form input, .filter-box input { min-width: 150px; }
+.track-card { overflow-wrap: anywhere; }
+input[type="file"] { max-width: 100%; }
+@media (max-width: 600px) {
+    .container { padding: 16px; }
+    .create-form, .filter-box { flex-direction: column; }
+    .track-card button { width: 100%; margin-right: 0; }
+}

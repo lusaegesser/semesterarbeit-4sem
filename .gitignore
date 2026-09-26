@@ -16,3 +16,6 @@ dist/
 uploads/
 .DS_Store
 Thumbs.db
+
+data/
+*.log

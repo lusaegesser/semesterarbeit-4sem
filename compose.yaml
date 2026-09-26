@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DATA_DIR: /app/data
+    volumes:
+      - archive-data:/app/data
+    restart: unless-stopped
+volumes:
+  archive-data:
