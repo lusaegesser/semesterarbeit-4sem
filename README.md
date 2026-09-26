@@ -10,10 +10,11 @@ HTML/JavaScript-Oberfläche und sechs API-Tests. Das ursprüngliche Repository b
 cd C:\repos\dj-set-archive
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+.\.venv\Scripts\python.exe -m app.setup_admin
+.\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --no-access-log
 ```
 
-Browser: http://127.0.0.1:8000 — API-Dokumentation: http://127.0.0.1:8000/docs
+Browser: http://127.0.0.1:8000
 
 Frontend und API laufen unter derselben Adresse. Es ist kein separater Webserver nötig.
 Datenbank und Audiodateien werden unter `data/` gespeichert und nicht eingecheckt.
@@ -32,6 +33,7 @@ Verzeichnis und werden anschliessend entfernt. GitHub Actions führt dieselben T
 
 ```powershell
 docker compose up --build -d
+docker compose exec app python -m app.setup_admin
 docker compose logs -f
 docker compose down
 ```
@@ -46,27 +48,52 @@ deshalb nur `docker compose down` verwenden.
 Umgebungsvariablen: `DATA_DIR` (Standard `data`), `DATABASE_URL` (Standard SQLite
 im Datenverzeichnis), `MAX_UPLOAD_BYTES` (Standard 512 MiB).
 
+## Anmeldung und Freigaben
+
+`python -m app.setup_admin` fragt ein Passwort verdeckt ab (mindestens 12 Zeichen).
+Ein gesalzener PBKDF2-Hash wird unter `data/admin-password.hash` gespeichert und
+nicht eingecheckt. Ohne Einrichtung bleibt die Anmeldung gesperrt. Erneutes
+Ausführen setzt das Passwort zurück und beendet alle Sitzungen. Alternativ kann
+`ADMIN_PASSWORD_HASH` gesetzt werden; diese Variable hat Vorrang vor der Datei.
+Sitzungen laufen nach acht Stunden ab. Die Einrichtung ist nur einmal nötig.
+Docker hat einen separaten Datenspeicher und benötigt eine eigene Einrichtung.
+
 ## Aktueller Umfang
 
-- Tracks erfassen, suchen, bearbeiten und löschen.
-- MP3/WAV hochladen und im Browser abspielen; Dateityp wird bisher nur anhand
-  der Endung geprüft. Uploadnamen werden serverseitig generiert.
-- Gesundheitsprüfung unter `/health` (Prozessstatus, keine Datenbankprüfung).
+- Administrator: Sets erfassen, suchen, bearbeiten und löschen, MP3/WAV hochladen.
+- Browser-Audioplayer mit Zeitmarken-Kommentaren und Sprung zur Abspielposition.
+- Privater Zugriff auf Sets und Audio; kein öffentlicher Upload-Ordner.
+- Ein widerrufbarer Freigabelink pro Set; neue Links ersetzen die bisherigen.
+- Jeder Besitzer des Links kann hören und kommentieren. Anzeigenamen sind nicht
+  verifiziert. Administrator kann Kommentare löschen.
+- Die kompatible Track-Datenstruktur bleibt erhalten; BPM und Tonart sind optional
+  in der Oberfläche. Dateitypen werden bisher nur anhand der Endung geprüft.
 
-**Nur lokale Entwicklung:** Anmeldung, Zugriffsrechte und Freigabelinks fehlen
-noch. Deshalb ausschliesslich auf localhost betreiben, nicht öffentlich deployen.
-Die bisherige Track-Oberfläche ist noch keine fertige Set-Verwaltung.
+## Grenzen der lokalen Entwicklungsfassung
+
+Noch nicht öffentlich deployen: HTTPS-Konfiguration, Backups, eine verteilte
+Begrenzung der Anmeldeversuche und Kommentar-Spamschutz fehlen. Die Login-Begrenzung
+gilt pro Prozess: insgesamt zehn Versuche pro Minute. Bei späterem HTTPS-Betrieb
+`COOKIE_SECURE=true` setzen.
+
+Links mit `127.0.0.1` funktionieren nur auf diesem Laptop. Für Kollegen brauchen
+wir eine erreichbare, abgesicherte Adresse. Widerruf verhindert weitere Abrufe;
+bereits heruntergeladene Audiodaten lassen sich damit nicht zurückholen.
+Freigabetokens werden beim Audioabruf als Query-Parameter übertragen. Uvicorn läuft
+daher ohne Zugriffslog; spätere Proxy-Logs müssen Query-Parameter ebenfalls auslassen.
+
+Alle schreibenden API-Anfragen benötigen `X-Archive-Request: 1` als CSRF-Schutz.
+Die Oberfläche setzt den Header automatisch. Fremdes CORS wird nicht erlaubt.
+Die Content-Security-Policy erlaubt nur lokale Skripte; die externe Swagger-Oberfläche
+wird dadurch nicht geladen. Das API-Schema steht unter `/openapi.json` bereit.
 
 ## Nächste Etappen
 
-1. Set-Datenmodell und mobile Oberfläche gestalten; Track-Felder wie BPM und
-   Tonart auf ihren Nutzen für vollständige Sets prüfen.
-2. Administrator-Anmeldung, Freigaben und Zeitmarken-Kommentare umsetzen.
-3. Speicherbedarf ermitteln, Hosting und Backups planen.
-4. Semesterarbeit 4: Benutzerkonten mit Uploads, Kubernetes/Helm und DevOps.
+1. Mit echten Sets testen und Oberfläche/Set-Metadaten verfeinern.
+2. Hosting, Speicherbedarf, Backups und Produktionsabsicherung planen.
+3. Semesterarbeit 4: Benutzerkonten mit Uploads, Kubernetes/Helm und DevOps.
 
 PostgreSQL, Objektspeicher, Terraform und Argo CD sind noch nicht umgesetzt.
-Die konkrete Abgrenzung richtet sich nach der Aufgabenstellung der Semesterarbeit.
 
 ## Herkunft und Unterricht
 

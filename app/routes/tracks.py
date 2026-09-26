@@ -6,10 +6,11 @@ from fastapi import APIRouter, Depends, HTTPException, Query, UploadFile, File
 from sqlalchemy.orm import Session
 
 from app.database import SessionLocal
-from app.models import Track
+from app.models import Track, Share, Comment
+from app.auth import require_admin
 from app.schemas import TrackCreate, TrackResponse
 
-router = APIRouter(prefix="/tracks", tags=["Tracks"])
+router = APIRouter(prefix="/tracks", tags=["Tracks"], dependencies=[Depends(require_admin)])
 
 from app.config import UPLOAD_DIR, MAX_UPLOAD_BYTES
 ALLOWED_EXTENSIONS = [".mp3", ".wav"]
@@ -112,6 +113,8 @@ def delete_track(track_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Track nicht gefunden")
 
     audio_file = track.audio_file
+    db.query(Share).filter(Share.track_id == track_id).delete()
+    db.query(Comment).filter(Comment.track_id == track_id).delete()
     db.delete(track)
     db.commit()
 

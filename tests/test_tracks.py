@@ -2,17 +2,17 @@ from fastapi.testclient import TestClient
 
 from app.main import app
 
-client = TestClient(app)
 
 
-def test_get_tracks():
+
+def test_get_tracks(client):
     response = client.get("/tracks/")
 
     assert response.status_code == 200
     assert isinstance(response.json(), list)
 
 
-def test_create_track():
+def test_create_track(client):
     track_data = {
         "title": "Test Track",
         "artist": "Test Artist",
@@ -38,7 +38,7 @@ def test_create_track():
     assert "id" in data
 
 
-def test_update_track():
+def test_update_track(client):
     track_data = {
         "title": "Track Before Update",
         "artist": "Test Artist",
@@ -76,7 +76,7 @@ def test_update_track():
     assert data["status"] == "Final"
 
 
-def test_delete_track():
+def test_delete_track(client):
     track_data = {
         "title": "Track To Delete",
         "artist": "Delete Artist",
@@ -100,7 +100,7 @@ def test_delete_track():
     assert get_response.status_code == 404
 
 
-def test_filter_tracks_by_genre():
+def test_filter_tracks_by_genre(client):
     track_data = {
         "title": "Filter Test Track",
         "artist": "Filter Artist",
@@ -123,7 +123,7 @@ def test_filter_tracks_by_genre():
     assert any(track["genre"] == "Trance" for track in data)
 
 
-def test_invalid_track_id_returns_404():
+def test_invalid_track_id_returns_404(client):
     response = client.get("/tracks/999999")
 
     assert response.status_code == 404

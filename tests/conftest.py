@@ -22,3 +22,18 @@ def clean_database():
 def pytest_sessionfinish(session, exitstatus):
     engine.dispose()
     _storage.cleanup()
+
+
+from fastapi.testclient import TestClient
+from app.main import app
+from app import auth
+
+_password_hash = auth.hash_password("test-password-123")
+
+@pytest.fixture
+def client(monkeypatch):
+    monkeypatch.setenv("ADMIN_PASSWORD_HASH", _password_hash)
+    auth.attempts.clear()
+    with TestClient(app, headers={"X-Archive-Request": "1"}) as client:
+        assert client.post("/auth/login", json={"password": "test-password-123"}).status_code == 200
+        yield client
