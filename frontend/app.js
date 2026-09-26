@@ -23,8 +23,10 @@ function input(type, placeholder, maxLength) { const node = document.createEleme
 function time(seconds) { return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`; }
 
 async function load() {
-    const tracks = shareToken && sharedId ? [await api(`/shared/${encodeURIComponent(sharedId)}`)] : await api(`/tracks/?title=${encodeURIComponent($("search").value)}`);
+    $("sharedHint").hidden = true;
     $("trackList").replaceChildren();
+    const tracks = shareToken && sharedId ? [await api(`/shared/${encodeURIComponent(sharedId)}`)] : await api(`/tracks/?title=${encodeURIComponent($("search").value)}`);
+    $("sharedHint").hidden = !(shareToken && sharedId);
     if (!tracks.length) $("trackList").append(element("p", "Noch keine Sets vorhanden. Erfasse dein erstes Set oben.", "muted"));
     for (const track of tracks) await renderTrack(track);
 }
@@ -99,7 +101,7 @@ async function init() {
     const state = await api("/auth/status"); authenticated = state.authenticated;
     const isShared = Boolean(shareToken && sharedId);
     $("loginPanel").hidden = authenticated || isShared; $("setupHint").hidden = state.configured;
-    $("adminPanel").hidden = !authenticated || isShared; $("sharedHint").hidden = !isShared;
+    $("adminPanel").hidden = !authenticated || isShared; $("sharedHint").hidden = true;
     if (authenticated || isShared) await load();
 }
 window.addEventListener("hashchange", () => location.reload());
