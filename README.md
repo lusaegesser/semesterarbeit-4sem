@@ -100,3 +100,30 @@ PostgreSQL, Objektspeicher, Terraform und Argo CD sind noch nicht umgesetzt.
 - https://gitlab.com/lukas03saegesser/semesterarbeit-3sem
 - https://ch-tbz-wb.gitlab.io/Stud/devops/0_Organisatorisches/Tagesplanungen/Readme/
 - https://helm-basics.training.acend.ch/docs/
+
+## Git Bash unter Windows
+
+In Git Bash werden Schrägstriche verwendet:
+
+```bash
+cd /c/repos/dj-set-archive
+./.venv/Scripts/python.exe -m app.setup_admin
+./.venv/Scripts/python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --no-access-log
+```
+
+Das Passwort-Setup nur bei der ersten Einrichtung oder zum Zurücksetzen ausführen.
+
+## Automatischer Containertest
+
+```bash
+python scripts/docker_smoke.py
+```
+
+Voraussetzung: laufende Docker Engine mit Compose v2. Der Test erstellt ein eigenes,
+eindeutig benanntes Compose-Projekt, einen zufälligen lokalen Port und ein separates
+Volume. Er prüft Anmeldung, Upload, Gastkommentar, Audio-Teilabruf und den Erhalt von
+Sitzung, Set, Audio, Kommentar und Freigabe beim Ersetzen des Containers. Anschliessend
+prüft er den Widerruf der Freigabe und die Abmeldung. Nur seine eigenen Testressourcen
+werden danach entfernt. Die normale App und deren Daten werden nicht verwendet.
+
+Derselbe Test läuft in GitHub Actions als separater Linux-Container-Job neben pytest.
