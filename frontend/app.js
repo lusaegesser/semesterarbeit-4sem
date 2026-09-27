@@ -42,7 +42,7 @@ async function renderTrack(track) {
     if (authenticated && !shareToken) {
         const controls = element("div", undefined, "controls");
         const upload = input("file", ""); upload.accept = ".mp3,.wav";
-        controls.append(field("Audiodatei (MP3/WAV, maximal 512 MiB)", upload));
+        controls.append(field("Audiodatei (MP3/WAV, maximal 1 GB)", upload));
         controls.append(button("Audio hochladen", async () => {
             if (!upload.files.length) throw new Error("Bitte eine Audiodatei auswählen.");
             const data = new FormData(); data.append("file", upload.files[0]);

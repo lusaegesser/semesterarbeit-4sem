@@ -4,7 +4,20 @@ Lokale Entwicklungsbasis für ein DJ-Set-Archiv. Übernommen aus Semesterarbeit 
 (Commit `6e4aa42`): FastAPI, SQLAlchemy, Track-Verwaltung, Filter, Audio-Uploads,
 HTML/JavaScript-Oberfläche und sechs API-Tests. Das ursprüngliche Repository bleibt unverändert.
 
-## Lokal starten (Windows / PowerShell)
+## Aktueller Betrieb auf diesem Laptop
+
+Die App läuft seit 26.09.2026 mit Docker Compose auf http://127.0.0.1:8000.
+Das vorhandene Administrator-Passwort wurde übernommen. Das aktive Daten-Volume
+steht in der lokalen `.env`. `data/` ist nur noch die unveränderte Rückfallkopie
+aus dem Python-Betrieb. Keine zweite App auf Port 8000 starten.
+
+Sicherung: `./.venv/Scripts/python.exe scripts/manage.py backup`
+
+Wiederherstellung: `./.venv/Scripts/python.exe scripts/manage.py restore backups/DATEINAME.zip`
+
+Details und Rückfallverfahren: [Betriebsanleitung](docs/backup-operations.md).
+
+## Alternative: Python-Entwicklungsbetrieb (Windows / PowerShell)
 
 ```powershell
 cd C:\repos\dj-set-archive
@@ -46,7 +59,7 @@ deshalb nur `docker compose down` verwenden.
 ## Konfiguration
 
 Umgebungsvariablen: `DATA_DIR` (Standard `data`), `DATABASE_URL` (Standard SQLite
-im Datenverzeichnis), `MAX_UPLOAD_BYTES` (Standard 512 MiB).
+im Datenverzeichnis), `MAX_UPLOAD_BYTES` (Standard 1 GB = 1.000.000.000 Bytes).
 
 ## Anmeldung und Freigaben
 
@@ -71,7 +84,7 @@ Docker hat einen separaten Datenspeicher und benötigt eine eigene Einrichtung.
 
 ## Grenzen der lokalen Entwicklungsfassung
 
-Noch nicht öffentlich deployen: HTTPS-Konfiguration, Backups, eine verteilte
+Noch nicht öffentlich deployen: HTTPS-Konfiguration, externe Backup-Kopie, eine verteilte
 Begrenzung der Anmeldeversuche und Kommentar-Spamschutz fehlen. Die Login-Begrenzung
 gilt pro Prozess: insgesamt zehn Versuche pro Minute. Bei späterem HTTPS-Betrieb
 `COOKIE_SECURE=true` setzen.
@@ -90,7 +103,7 @@ wird dadurch nicht geladen. Das API-Schema steht unter `/openapi.json` bereit.
 ## Nächste Etappen
 
 1. Mit echten Sets testen und Oberfläche/Set-Metadaten verfeinern.
-2. Hosting, Speicherbedarf, Backups und Produktionsabsicherung planen.
+2. Hosting, Speicherbedarf, externe Backup-Kopie und Produktionsabsicherung planen.
 3. Semesterarbeit 4: Benutzerkonten mit Uploads, Kubernetes/Helm und DevOps.
 
 PostgreSQL, Objektspeicher, Terraform und Argo CD sind noch nicht umgesetzt.

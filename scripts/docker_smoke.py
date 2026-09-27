@@ -122,6 +122,15 @@ def main():
             request("/auth/logout", "POST")
             request("/tracks/", expected=401)
             print("PASS: session, set, audio, comments and share survive container replacement; revocation and logout work", flush=True)
+            compose("stop", "app")
+            compose("run", "--rm", "--no-deps", "app", "python", "scripts/archive_backup.py",
+                    "create", "--archive", "/app/data/smoke-backup.zip")
+            # Restore into a new directory in a disposable helper container,
+            # leaving the original volume unchanged.
+            compose("run", "--rm", "--no-deps", "app", "python", "scripts/archive_backup.py",
+                    "restore", "--archive", "/app/data/smoke-backup.zip", "--data-dir", "/tmp/restored")
+            print("PASS: complete backup verified and restored in a separate directory", flush=True)
+
         finally:
             # This unique project and volume contain only this script's test data.
             compose("down", "--volumes", "--remove-orphans", "--rmi", "local")

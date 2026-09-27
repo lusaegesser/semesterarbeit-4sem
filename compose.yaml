@@ -10,3 +10,5 @@ services:
     restart: unless-stopped
 volumes:
   archive-data:
+    name: ${ARCHIVE_VOLUME:-dj-set-archive_archive-data}
+    external: ${ARCHIVE_VOLUME_EXTERNAL:-false}
