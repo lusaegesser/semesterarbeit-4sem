@@ -21,3 +21,8 @@ data/
 *.log
 
 backups/
+
+# Lokale Arbeitsanweisungen und Werkzeugeinstellungen
+AGENTS.md
+.agents/
+.codex/
