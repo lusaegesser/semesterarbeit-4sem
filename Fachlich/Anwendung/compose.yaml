@@ -1,3 +1,4 @@
+name: setflow-semesterarbeit
 services:
   app:
     build: .
@@ -24,7 +25,7 @@ services:
     restart: unless-stopped
 volumes:
   archive-data:
-    name: ${ARCHIVE_VOLUME:-dj-set-archive_archive-data}
+    name: ${ARCHIVE_VOLUME:-setflow-semesterarbeit-data}
     external: ${ARCHIVE_VOLUME_EXTERNAL:-false}
   caddy-data:
   caddy-config:

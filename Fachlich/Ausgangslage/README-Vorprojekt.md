@@ -15,7 +15,7 @@ Sicherung: `./.venv/Scripts/python.exe scripts/manage.py backup`
 
 Wiederherstellung: `./.venv/Scripts/python.exe scripts/manage.py restore backups/DATEINAME.zip`
 
-Details und Rückfallverfahren: [Betriebsanleitung](docs/backup-operations.md).
+Details und Rückfallverfahren: [Betriebsanleitung](../Betrieb/backup-operations.md).
 
 ## Alternative: Python-Entwicklungsbetrieb (Windows / PowerShell)
 

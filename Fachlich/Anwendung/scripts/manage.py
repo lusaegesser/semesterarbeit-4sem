@@ -1,4 +1,4 @@
-"""Run from the repository: python scripts/manage.py backup | restore BACKUP.zip"""
+"""Run from Fachlich/Anwendung: python scripts/manage.py backup | restore BACKUP.zip"""
 import argparse
 import json
 import os
