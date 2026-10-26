@@ -1,173 +1,87 @@
 # Fachlicher Teil
 
-[Startseite](../README.md) · [Projektmanagement](../Projektmanagement/README.md) ·
-[Anforderungsmatrix](Anforderungsmatrix.md) · [Nachweise](Nachweise/README.md)
-
-Dieses Hauptdokument führt durch Ausgangslage, Ziele, Architektur, Umsetzung,
-Tests und Betrieb von SetFlow. Der Schwerpunkt der Semesterarbeit 4 liegt auf
-der DevOps-Pipeline. Stand: 26.10.2026; neue technische Umsetzung und Nachweise
-sind überwiegend noch offen. Fachdozent: Armin Dörzbach.
-
-## Inhaltsverzeichnis
-
-- [Ausgangslage und Vorleistungen](#ausgangslage-und-vorleistungen)
-- [Anforderungen und Abnahme](#anforderungen-und-abnahme)
-- [Struktur und Architektur](#struktur-und-architektur)
-- [Umsetzung nach Epics](#umsetzung-nach-epics)
-- [Tests und Nachweise](#tests-und-nachweise)
-- [Betrieb und Rückfall](#betrieb-und-rückfall)
-- [Soll-Ist-Vergleich und Abschluss](#soll-ist-vergleich-und-abschluss)
-- [Anhang und Quellen](#anhang-und-quellen)
+[Startseite](../README.md) · [Projektmanagement](../Projektmanagement/README.md)
 
 ## Ausgangslage und Vorleistungen
 
-Die vorhandene Python-/FastAPI-Anwendung verwaltet DJ-Sets mit SQLite,
-Audio-Uploads bis 1 GB, Administrator-Anmeldung, Freigabelinks und zeitbezogenen
-Kommentaren. Der bisherige Betrieb verwendet Docker Compose. Backup-/Restore-
-Werkzeuge und HTTPS-Vorbereitung wurden aus dem Vorprojekt übernommen.
+SetFlow ist eine FastAPI-Anwendung mit SQLite, Audio-Uploads, Administrator-Anmeldung,
+Freigabelinks und zeitbezogenen Kommentaren. Anwendung, Tests, bestehende CI,
+Docker-Betrieb und Backup-/Restore-Verfahren stammen aus dem Vorprojekt.
 
-Der bestehende Workflow enthält pytest und einen Docker-Smoke-Test. Anwendung,
-Tests und bisherige Betriebsverfahren sind Vorleistungen. Neue Semesterarbeitsleistung
-ist ihre gezielte Weiterentwicklung zur durchgängigen CI/CD-Pipeline samt Nachweisen.
-
-[Ausgangslage und Vorprojekt](Ausgangslage/README.md) und
-[Bestandsaufnahme vom 26.10.2026](Bestandsaufnahme-2026-10-26.md) halten Herkunft,
-Implementierungsstand und Prüfgrenzen fest. Historische Testergebnisse werden
-nicht als neu durchgeführte Tests ausgewiesen.
+Die Semesterarbeit ergänzt die durchgängige Verbindung von Prüfung, versioniertem
+Image und kontrollierter Bereitstellung. Neue Leistungen werden getrennt nachgewiesen.
 
 ## Anforderungen und Abnahme
 
-Grundlage ist der [Antrag](../Projektmanagement/Antrag/README.md), dessen Annahme
-Lukas bestätigt hat. Die [Anforderungs- und Nachweismatrix](Anforderungsmatrix.md)
-ordnet A01–A07 jeweils Termin, Vorleistung, neue Leistung und Nachweis zu.
+Der Antrag ist abgelegt. Die Anforderungsmatrix ordnet Ziele und Nachweise zu.
 
-Tabelle 01: Technische Abnahmebereiche.
-
-| Bereich | Geplanter Nachweis | Termin |
+| Bereich | Nachweis | Termin |
 | --- | --- | --- |
-| Tests und Registry | Antragsfälle mit pytest/HTTPX; drei Publish-Läufe; absichtlicher Testfehler sperrt Veröffentlichung | 13.12.2026 |
-| Deployment | Lokaler begrenzter Runner, drei Helm-Deployments mit Health-Smoke-Test, erfolgreicher Rollback | 21.01.2027 |
-| Daten | Pod-Ersatz mit erhaltenen Daten; isolierter Restore mit DB-Integrität, Anzahlen und Audio-SHA-256 | 21.01.2027 |
+| Tests und Images | Antragsfälle mit pytest/HTTPX, drei Publish-Läufe und Publish-Sperre bei Testfehler | 13.12.2026 |
+| Deployment | Drei Helm-Deployments mit Smoke-Test und erfolgreicher Rollback | 21.01.2027 |
+| Daten | Pod-Datenerhalt und isolierter Restore mit Integritäts-, Anzahl- und SHA-256-Vergleich | 21.01.2027 |
 
-Die konkrete Abnahme erfolgt pro Story anhand ihrer Akzeptanzkriterien und der
-[Definition of Done](../Projektmanagement/Definition-of-Done.md).
+*Tabelle 01: Technische Abnahmebereiche.*
 
 ## Struktur und Architektur
 
-### Repository
+Die technische Ablage liegt vollständig unter `Fachlich/`.
 
-Tabelle 02: Technische Ablage im bestehenden Repository.
-
-| Pfad | Inhalt |
+| Ordner | Inhalt |
 | --- | --- |
-| [app/](../app/) | FastAPI-Anwendung und Datenzugriff |
-| [frontend/](../frontend/) | Browseroberfläche |
-| [tests/](../tests/) | Automatisierte Tests |
-| [scripts/](../scripts/) | Verwaltung, Backup und Container-Smoke-Test |
-| [.github/workflows/](../.github/workflows/) | Bestehende und künftig erweiterte Pipeline |
-| [Dockerfile](../Dockerfile), [compose.yaml](../compose.yaml), [deploy/](../deploy/) | Container und bisherige Betriebsdateien |
+| `Anwendung/` | App, Oberfläche, Tests, Skripte und Containerdateien |
+| `Betrieb/` | Betriebs- und Sicherungsanleitungen |
+| `Ausgangslage/` | Vorprojekt und historische Protokolle |
+| `Nachweise/`, `Medien/` | Neue Prüfprotokolle und bereinigte Abbildungen |
 
-Die Dokumentation ist in [Projektmanagement](../Projektmanagement/README.md) und
-Fachliches gegliedert. [Repository-Struktur](../docs/repository-struktur.md)
-erläutert die Ablage und den Lesepfad. Codeversionen werden über Git geführt.
+*Tabelle 02: Fachliche Ablage.*
 
-### Ist und Zielbild
-
-Ist: Compose-basierter Betrieb mit vorhandenen Test- und Sicherungswerkzeugen.
-Ziel: GitHub Actions prüft Änderungen und veröffentlicht Commit-gekennzeichnete
-Images in GHCR. Vertrauenswürdige Deployment-Jobs nutzen einen lokalen Runner,
-der mit Helm in einen eigenen lokalen Kubernetes-Namespace deployt.
-Die Cluster-Variante ist noch zu begründen. Die Kubernetes-API bleibt ohne
-öffentliche Freigabe; der lokale Runner verarbeitet keine Pull-Request-Jobs.
-
-Entscheide und ihre Begründung stehen im [Entscheidungsprotokoll](../docs/entscheidungen.md).
-Das Zielbild ist geplant; es beschreibt noch keine nachgewiesene Installation.
+Ist: Compose-Betrieb mit bestehenden Tests und Sicherungswerkzeugen.
+Ziel: GitHub Actions prüft Änderungen und veröffentlicht Commit-Images in GHCR.
+Ein lokaler Runner deployt mit Helm in einen eigenen Kubernetes-Namespace.
+Die Kubernetes-API bleibt privat; der Runner verarbeitet keine PR-Jobs.
 
 ## Umsetzung nach Epics
 
-### Epic A – Projektgrundlagen und Sprintsteuerung
-
-Die fachliche Zuordnung der Antragsziele erfolgt in P02 / SEM4-2.
-Methodik, Kapazität und Sprintberichte stehen im [PM-Hauptdokument](../Projektmanagement/README.md).
-
-### Epic B – Automatisierte Tests und versionierte Images
-
-Tabelle 03: Geplante Arbeit in Epic B.
-
-| Story | Thema | Fachlicher Stand |
+| Epic | Stories | Stand |
 | --- | --- | --- |
-| P03 / SEM4-6 | Tests und CI isoliert prüfen | Testdateien vorhanden; Ausführung und Abdeckung neu prüfen |
-| P04 / SEM4-7 | Begründete Testlücke schliessen | Auswahl nach P03; noch nicht implementiert |
-| P07 / SEM4-10 | Tests, Build und GHCR verbinden | Testworkflow vorhanden; Publish und neue Nachweise offen |
+| A – Projektgrundlagen | P02: Ziele und Nachweise | Matrix vorbereitet |
+| B – Tests und Images | P03: Bestandsprüfung; P04: Testergänzung; P07: CI/GHCR | Technische Weiterentwicklung offen |
+| C – Bereitstellung und Daten | P08: Kubernetes/Helm; P09: Runner; P10: Deployment/Rollback; P11: Datenerhalt/Restore | Umsetzung und Nachweise offen |
 
-Nach Umsetzung je Story ergänzen: Problem, gewählter Ansatz, relevante Änderungen,
-begründete Entscheide, Testresultat und bereinigter Nachweis. Kleine Codeausschnitte
-werden mit dem tatsächlichen Git-Stand verlinkt.
+*Tabelle 03: Umsetzungsschwerpunkte.*
 
-### Epic C – Kontrollierte Bereitstellung und Datenerhalt
-
-Tabelle 04: Geplante Arbeit in Epic C.
-
-| Story | Thema | Fachlicher Stand |
-| --- | --- | --- |
-| P08 / SEM4-11 | Kubernetes und Helm vorbereiten | Cluster-Auswahl und Chart offen |
-| P09 / SEM4-12 | Lokalen Runner begrenzen | Installation, Rechte und Triggerprüfung offen |
-| P10 / SEM4-13 | Deployments, Smoke-Test und Rollback | Helm-Nachweise offen |
-| P11 / SEM4-14 | Pod-Datenerhalt und isolierter Restore | Neue Kubernetes-Nachweise offen; bestehende Backup-Werkzeuge sind Vorleistung |
-
-Die [Jira-Zuordnung](../Projektmanagement/Jira-Abbildung.md) verlinkt alle tatsächlichen
-Vorgänge. Umsetzungsergebnisse werden erst nach Durchführung ergänzt.
+Anwendung und Testwerkzeuge liegen gemeinsam unter `Anwendung/`. Die CI verwendet
+diesen Arbeitsordner. Docker-Buildkontext und relative App-Pfade bleiben konsistent.
 
 ## Tests und Nachweise
 
-Neue Tests verwenden getrennte Daten und Umgebungen. Ein Testprotokoll nennt
-Datum, Commit, Voraussetzung, Durchführung, Soll/Ist, Ergebnis und Grenzen.
-Die [Nachweisübersicht](Nachweise/README.md) führt zu den abgelegten Resultaten.
-Screenshots und optionale Demos liegen unter [Medien](Medien/README.md).
-
-Aus historischen Protokollen werden keine aktuellen Erfolgsaussagen abgeleitet.
-Private Audiodateien, Tokens, Passwort-Hashes und Backup-Archive werden nicht abgelegt.
+Tests verwenden isolierte Daten und Umgebungen. Protokolle enthalten Datum,
+Commit, Voraussetzung, Schritte, Soll/Ist, Ergebnis und Grenzen.
+Private Aufnahmen, Zugangsdaten und Backup-Archive gehören nicht ins Repository.
 
 ## Betrieb und Rückfall
 
-Die [Betriebsdokumentation](../docs/README.md) kennzeichnet die übernommenen
-Anleitungen und Protokolle des bisherigen Compose-Betriebs. Sie beziehen sich auf
-den separaten Alt-Checkout und ersetzen keine Anleitung für den künftigen Cluster.
-Vor Betriebsänderungen werden Projektname, Ports, Volumes und Datenisolation geprüft.
-
-Für die neue Zielumgebung sind Installation, Update, Runner-Start, Sicherung,
-Restore und Rollback noch anhand der tatsächlichen Umsetzung zu dokumentieren.
-Ein einzelner Projektlaptop bietet keine Hochverfügbarkeit.
+Die übernommenen Anleitungen beziehen sich auf den bisherigen Compose-Betrieb.
+Installation, Update und Rückfall der neuen Zielumgebung werden mit der Umsetzung
+dokumentiert. Der bisherige produktive Checkout bleibt unverändert.
 
 ## Soll-Ist-Vergleich und Abschluss
 
-Die abschliessende Bewertung ist offen. Nach Umsetzung werden A01–A07 mit den
-tatsächlichen Ergebnissen abgeglichen. Abweichungen, Einschränkungen und offene
-Punkte erhalten eine Begründung. P12 / SEM4-15 bündelt die Abschlussunterlagen.
+Die Zielerreichung wird abschliessend anhand der Anforderungsmatrix bewertet.
+Abweichungen und Einschränkungen werden begründet.
 
-## Anhang und Quellen
+## Unterlagen
 
+- [Anwendung und Tests](Anwendung/README.md)
 - [Anforderungsmatrix](Anforderungsmatrix.md)
-- [Ausgangslage](Ausgangslage/README.md)
-- [Tests und Nachweise](Nachweise/README.md)
-- [Medien](Medien/README.md)
-- [Betrieb und historische Protokolle](../docs/README.md)
+- [Betrieb](Betrieb/README.md)
+- [Entscheidungen](Entscheidungen.md)
+- [Nachweise](Nachweise/README.md)
 
-### Quellenstand
+### Quellen und Verzeichnisse
 
-Derzeitige Grundlage sind der Antrag, das bestehende Repository mit seiner
-Git-Historie und die verlinkten Bestandsprotokolle. Technische Referenzen werden
-bei ihrer tatsächlichen Verwendung mit Bezug zur Story ergänzt.
-Erforderliche Quellen- und Hilfsmitteldeklarationen werden mit den gültigen
-Schulvorgaben abgeglichen.
+Grundlage sind Antrag, Repository und Bestandsprotokolle. Technische Referenzen
+und erforderliche Hilfsmitteldeklarationen werden bei Verwendung ergänzt.
 
-### Abbildungs- und Tabellenverzeichnis
-
-In diesem Hauptdokument sind noch keine Abbildungen eingebunden.
-
-- Tabelle 01: Technische Abnahmebereiche.
-- Tabelle 02: Technische Ablage im bestehenden Repository.
-- Tabelle 03: Geplante Arbeit in Epic B.
-- Tabelle 04: Geplante Arbeit in Epic C.
-
-[Zur Startseite](../README.md)
+Tabelle 01: Abnahmebereiche. Tabelle 02: Ablage. Tabelle 03: Umsetzungsschwerpunkte.

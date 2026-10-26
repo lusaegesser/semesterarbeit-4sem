@@ -98,7 +98,7 @@ Akzeptanzkriterien:
 - [ ] Repo- und Board-Link sowie Rollen Corrado/Armin sind dokumentiert.
 - [ ] Einladungsweg und verfügbare Leserechte sind geprüft; tatsächliche Einladungen/Zugriff bleiben bis Durchführung offen.
 - [ ] Planning-Mitteilung enthält Sprintziel, vorläufige Schätzungen, Umfang und offene Kapazität.
-- [ ] Versand erfolgt durch Lukas; Versand und Zugriffsbestätigung werden erst danach erfasst.
+- [ ] Versand und Zugriffsbestätigung werden nach Durchführung erfasst.
 
 ## P06 – MVP-Review und Retrospektive durchführen
 

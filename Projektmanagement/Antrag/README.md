@@ -4,10 +4,7 @@
 
 [SetFlow – Einreichungsformular](<ITCNE25_Semesterarbeit 4 (Einreichungsformular) v2.docx>)
 
-Lukas hat die Annahme des Antrags bestätigt. Die abgelegte DOCX enthält die
-messbaren Ziele und Termine; ihr Genehmigungsfeld und die Unterschriftszeilen
-sind nicht ausgefüllt. Eine schriftliche Annahmebestätigung kann ergänzend
-abgelegt werden, sofern sie für die Dokumentation freigegeben und bereinigt ist.
+Der Antrag ist abgelegt und enthält die Projektziele und Termine.
 
 Projektmanagementdozent: Corrado Parisi. Fachdozent: Armin Dörzbach.
 Die [Anforderungsmatrix](../../Fachlich/Anforderungsmatrix.md) ordnet die Antragsziele

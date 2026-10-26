@@ -1,8 +1,8 @@
 # Git-Workflow und Zusammenarbeit
 
-[Startseite](README.md) · [Projektmanagement](Projektmanagement/README.md)
+[Startseite](../README.md) · [Projektmanagement](../Projektmanagement/README.md)
 
-SetFlow wird als Einzelprojekt auf zwei Arbeitsgeräten bearbeitet. Grundlage ist
+SetFlow wird als Einzelprojekt bearbeitet. Grundlage ist
 der Unterricht [Tag 02 – Git und Versionskontrolle](https://ch-tbz-wb.gitlab.io/Stud/devops/0_Organisatorisches/Tagesplanungen/Tag02/),
 abgeglichen am 26.10.2026. Die Übungen zu Teamarbeit werden auf eine reale
 Einzelarbeit übertragen; fremde Reviews oder Konflikte werden nicht simuliert
@@ -22,7 +22,7 @@ Branch-Namen enthalten Jira-Kennung und Thema:
 - `hotfix/SEM4-42-beschreibung` für beauftragte dringende Betriebskorrekturen.
 
 Die Kennung `SEM4-42` ist ein Formatbeispiel, kein vorhandener Vorgang.
-Keine parallelen Änderungen derselben Dateien auf beiden Geräten.
+Änderungen werden über Aufgabenbranches abgestimmt.
 
 ## Arbeitsablauf
 
@@ -55,7 +55,7 @@ Beispiel: `docs(sprints): SEM4-1 Sprintplanung und Tasks vorbereiten`.
 
 ## Pull Requests und Merge
 
-Lukas verantwortet Änderungen und Integration. Für das Einzelprojekt sind keine
+Änderungen und Integration liegen bei der Projektleitung. Für das Einzelprojekt sind keine
 unabhängigen Mindestfreigaben als durchgeführt vorausgesetzt. Falls später weitere
 Personen beitragen, werden Review-Regeln entsprechend erweitert.
 
@@ -70,9 +70,10 @@ werden nicht als bereits technisch erzwungen ausgegeben.
 
 ## Prüfungen
 
+Die Testbefehle werden in `Fachlich/Anwendung/` ausgeführt.
 Reine Dokumentation: Inhalte, lokale Links, Sprungmarken, Dateien und
 `git diff --check` prüfen. Technische Änderungen: relevante pytest-/Container-
-und Pipeline-Prüfungen gemäss [Definition of Done](Projektmanagement/Definition-of-Done.md).
+und Pipeline-Prüfungen gemäss [Definition of Done](../Projektmanagement/Definition-of-Done.md).
 Die vorhandene CI läuft bei Push und Pull Request; ihr Ergebnis wird verlinkt.
 Eine nicht ausgeführte oder fehlgeschlagene Prüfung bleibt sichtbar.
 
@@ -104,13 +105,5 @@ Semesterarbeits-MVP ist `v0.1.0` nach tatsächlicher Abnahme.
 
 Ein Release benötigt einen geprüften integrierten Git-Stand, Nachweise und Release
 Notes mit Änderungen, Prüfungen, Einschränkungen und Betriebs-/Rückfallhinweisen.
-Lukas verantwortet annotierten Tag und GitHub-Release. Es wird kein Übungs-Release
+Die Projektleitung verantwortet annotierten Tag und GitHub-Release. Es wird kein Übungs-Release
 aus dem Unterricht als erfolgreiches SetFlow-MVP ausgegeben.
-
-## Aufgabenverteilung bei Unterstützung
-
-Unterstützung kann Änderungen vorbereiten, Diffs und Links prüfen, Commits nach
-Auftrag erstellen, Branches pushen, PRs vorbereiten und tatsächliche CI-Ergebnisse
-auswerten. Lukas legt Verfügbarkeit und Commitment fest und verantwortet die
-fachliche Abnahme. Nachrichten, Einladungen, Betriebsänderungen und Veröffentlichungen
-erfolgen nur innerhalb des jeweils beauftragten Umfangs.

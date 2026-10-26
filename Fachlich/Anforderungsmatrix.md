@@ -1,6 +1,6 @@
 # Anforderungs- und Nachweismatrix
 
-Grundlage: [Antrag](../Projektmanagement/Antrag/), Annahme durch Lukas bestätigt.
+Grundlage: der abgelegte Antrag unter `Projektmanagement/Antrag/`.
 Stand: 26.10.2026. Nachweise sind geplant, sofern nicht ausdrücklich anders bezeichnet.
 Die technischen Ziele werden hier zugeordnet; ihre Umsetzung erfolgt in eigenen Aufgaben.
 

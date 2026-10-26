@@ -34,7 +34,7 @@ geschlossen, sodass Änderungen an SetFlow fundiert beurteilt werden können.**
 
 ### Kapazität und Schätzung
 
-Das Stundenbudget ist laut Lukas noch offen. Geplant sind vorläufig 20 Story
+Das Stundenbudget ist noch offen. Geplant sind vorläufig 20 Story
 Points und 22 Stunden Arbeit sowie 5 Stunden Reserve. Das ist ein Planungsbedarf
 von 27 Stunden, keine bestätigte Verfügbarkeit und keine erfasste Arbeitszeit.
 Fibonacci-Punkte vergleichen Komplexität und Unsicherheit; es gibt keine feste
@@ -113,7 +113,7 @@ Akzeptanzkriterien:
 - [ ] Repo- und Board-Link sowie Rollen Corrado/Armin sind dokumentiert.
 - [ ] Einladungsweg und verfügbare Leserechte sind geprüft; tatsächliche Einladungen/Zugriff bleiben bis Durchführung offen.
 - [ ] Planning-Mitteilung enthält Sprintziel, vorläufige Schätzungen, Umfang und offene Kapazität.
-- [ ] Versand erfolgt durch Lukas; Versand und Zugriffsbestätigung werden erst danach erfasst.
+- [ ] Versand und Zugriffsbestätigung werden nach Durchführung erfasst.
 
 **Tasks**
 
@@ -123,7 +123,7 @@ Tabelle 04: Tasks P05.
 | --- | --- | --- |
 | P05.1 | **Einladungsweg und Rechte prüfen:** Dozentenkonten und passende Repo-/Jira-Leserechte klären; keine Einladungen als erfolgt behaupten. | [SEM4-28](https://lukas-saegesser.atlassian.net/browse/SEM4-28) |
 | P05.2 | **Planning-Mitteilung vorbereiten:** Sprintziel, Links, Schätzungen, offenen Kapazitätsabgleich und Feedbackfragen in einen Teams-Entwurf aufnehmen. | [SEM4-29](https://lukas-saegesser.atlassian.net/browse/SEM4-29) |
-| P05.3 | **Versand und Zugriff nach tatsächlicher Durchführung erfassen:** Lukas versendet und lädt ein; erst danach Versanddatum und Zugriffsbestätigungen dokumentieren. | [SEM4-30](https://lukas-saegesser.atlassian.net/browse/SEM4-30) |
+| P05.3 | **Versand und Zugriff nach tatsächlicher Durchführung erfassen:** Versanddatum und Zugriffsbestätigungen nach Durchführung dokumentieren. | [SEM4-30](https://lukas-saegesser.atlassian.net/browse/SEM4-30) |
 
 #### User Story P06 – MVP-Review und Retrospektive durchführen
 
@@ -330,7 +330,7 @@ erst nach tatsächlicher Aufnahme und Bereinigung ergänzen und beschriften.
 
 ## Grundlage und weiterführende Dokumente
 
-Der Aufbau orientiert sich am von Lukas bereitgestellten Auszug der
+Der Aufbau orientiert sich an der
 [Sprint-1-Dokumentation aus Semesterarbeit 2](https://gitlab.com/lukas03saegesser/semesterarbeit-2sem/-/tree/main/Projektmanagement/00_Sprints/Sprint1?ref_type=heads).
 Inhalte und Ergebnisse sind für SetFlow neu geplant; historische Review-Ergebnisse
 werden nicht übernommen.

@@ -3,7 +3,9 @@
 [Fachlicher Teil](../README.md) · [Anforderungsmatrix](../Anforderungsmatrix.md)
 
 Hier werden neue Testprotokolle und bereinigte Ergebnisse der Semesterarbeit 4
-abgelegt. Neue technische Prüfungen sind bislang noch nicht als Nachweis hinterlegt.
+abgelegt.
+
+- [Prüfung der Repository-Struktur vom 26.10.2026](2026-10-26-repository-struktur.md)
 
 Tabelle 01: Geplante Nachweisgruppen.
 
@@ -17,5 +19,5 @@ Tabelle 01: Geplante Nachweisgruppen.
 Ein Protokoll enthält Datum, Commit, Umgebung, isolierte Testdaten, Voraussetzung,
 Schritte, Soll/Ist, Ergebnis, Grenzen und bereinigte Nachweislinks.
 Für Bilder und optionale Demos steht [Medien](../Medien/README.md) zur Verfügung.
-Die übernommenen [historischen Protokolle](../../docs/README.md#vorprojekt-und-historischer-betrieb)
+Die übernommenen [historischen Protokolle](../Betrieb/README.md#vorprojekt-und-historischer-betrieb)
 bleiben als Vorleistung gekennzeichnet.

@@ -1,198 +1,99 @@
 # Projektmanagement
 
-[Startseite](../README.md) · [Fachlicher Teil](../Fachlich/README.md) ·
-[Sprints](00_Sprints/README.md) ·
-[Jira SEM4](https://lukas-saegesser.atlassian.net/jira/software/projects/SEM4/boards/67/backlog)
-
-Dieses Hauptdokument beschreibt Auftrag, Planung, Zusammenarbeit und Reflexion
-der Semesterarbeit SetFlow. Die detaillierten Sprintberichte und Nachweise sind
-von hier aus erreichbar. Stand: 26.10.2026; das Projekt befindet sich in der Vorbereitung.
-
-## Inhaltsverzeichnis
-
-- [Projektinitiierung](#projektinitiierung)
-- [Projektplanung](#projektplanung)
-- [Sprints](#sprints)
-- [Kommunikation und Projektverlauf](#kommunikation-und-projektverlauf)
-- [Abschluss und Reflexion](#abschluss-und-reflexion)
-- [Anhang und Verzeichnisse](#anhang-und-verzeichnisse)
+[Startseite](../README.md) · [Fachlicher Teil](../Fachlich/README.md) · [Sprints](00_Sprints/README.md)
 
 ## Projektinitiierung
 
 ### Auftrag und Problemstellung
 
-SetFlow verwaltet und teilt eigene DJ-Sets. Die Anwendung und der bisherige
-Docker-Betrieb bestehen bereits. Für Änderungen fehlt die durchgängige Verbindung
-von automatisierter Prüfung, versionierten Images und kontrollierter Bereitstellung.
-Diese Semesterarbeit erweitert den Entwicklungs- und Bereitstellungsprozess;
-DevOps ist der Schwerpunkt, Kubernetes und Helm bilden die lokale Zielumgebung.
+SetFlow verwaltet und teilt DJ-Sets. Anwendung, Tests und Docker-Betrieb bestehen
+bereits. Die Semesterarbeit ergänzt eine durchgängige DevOps-Pipeline mit
+automatisierten Tests, versionierten Images und kontrollierten Deployments.
+Der Antrag ist abgelegt.
 
-Der [Antrag](Antrag/README.md) ist abgelegt; seine Annahme hat Lukas bestätigt.
-Die Abgrenzung der Vorleistungen steht im [fachlichen Teil](../Fachlich/README.md#ausgangslage-und-vorleistungen).
+### Ziele
 
-### Ziele und Abnahme
+| Bereich | Ergebnis | Termin |
+| --- | --- | --- |
+| Projektmanagement | Drei Sprints mit Zielen, Stories, Kriterien, DoD, Planning, Review und Retrospektive | 27.01.2027 |
+| CI und Images | pytest/HTTPX, Commit-Images in GHCR, drei erfolgreiche Läufe und gesperrter Publish bei Testfehler | 13.12.2026 |
+| Deployment | Begrenzter lokaler Runner, Helm, drei Deployments mit Smoke-Test und geprüfter Rollback | 21.01.2027 |
+| Daten | Datenerhalt nach Pod-Ersatz und isolierter Restore mit Integritäts- und Prüfsummenvergleich | 21.01.2027 |
 
-Tabelle 01: Projektziele gemäss Antrag.
+*Tabelle 01: Projektziele gemäss Antrag.*
 
-| Ziel | Messbares Ergebnis | Termin | Details |
-| --- | --- | --- | --- |
-| Projektmanagement | Drei Sprints mit Zielen, Stories, Kriterien, DoD, Planning, Review und Retro; laufende Dokumentation und Dozenteneinbezug | 27.01.2027 | [Sprintübersicht](00_Sprints/README.md) |
-| CI und Images | Antragsfälle mit pytest/HTTPX geprüft; Commit-Images in GHCR; drei erfolgreiche Läufe und ein Testfehler, der Publish verhindert | 13.12.2026 | [A02–A03](../Fachlich/Anforderungsmatrix.md) |
-| Deployment und Rückfall | Begrenzter lokaler Runner, Helm, drei Deployments mit Smoke-Test und geprüfter Rollback | 21.01.2027 | [A04–A05](../Fachlich/Anforderungsmatrix.md) |
-| Datenerhalt und Restore | Daten bleiben nach Pod-Ersatz erhalten; isolierter Restore mit Integritäts-, Anzahl- und Prüfsummenvergleich | 21.01.2027 | [A06–A07](../Fachlich/Anforderungsmatrix.md) |
+### Vorgehen und Beteiligte
 
-Die Ziele sind geplant. Ihre Erfüllung wird erst mit tatsächlichen Nachweisen beurteilt.
+Drei agile Sprints, MoSCoW-Priorisierung und Fibonacci-Schätzungen.
+Story Points vergleichen Komplexität; Stunden dienen der Kapazitätsplanung.
+Für alle Stories gilt eine gemeinsame Definition of Done.
 
-### Vorgaben und Abgrenzung
-
-Die Arbeit läuft vom 26.10.2026 bis 27.01.2027. Der produktive Alt-Checkout und
-seine Daten bleiben geschützt. Tests nutzen getrennte Daten und Umgebungen.
-Die persönliche Website und Hochverfügbarkeit gehören nicht zum Umfang.
-Vorleistungen werden getrennt ausgewiesen; Dozierenden-Mitteilungen werden nach
-Planning und Review vorbereitet und durch Lukas versendet.
-
-Das offizielle Merkblatt A ist noch abzugleichen. Die ergänzenden Empfehlungen
-ersetzen die offiziellen Vorgaben nicht. Der frühere [Grundlagenabgleich](Pruefung-Projektgrundlagen.md)
-hält Quellen und damalige Prüfgrenzen fest.
-
-### Methoden und Werkzeuge
-
-Die Durchführung erfolgt agil in drei Sprints. Das Backlog enthält User Stories
-mit prüfbaren Akzeptanzkriterien und MoSCoW-Prioritäten. Fibonacci-Punkte dienen
-als relative Schätzung; Stunden bleiben separate Planungswerte. Für jede Story
-gilt die [Definition of Done](Definition-of-Done.md).
-
-Branching, Commit-Konventionen, Eigenprüfung und Releases sind im
-[Git-Workflow](../CONTRIBUTING.md) aus dem DevOps-Unterricht auf die Einzelarbeit
-übertragen. CI und nachvollziehbare PRs unterstützen die Prüfung.
-
-Tabelle 02: Werkzeuge und Zuständigkeit der Ablagen.
-
-| Werkzeug / Ablage | Zweck |
+| Person | Rolle |
 | --- | --- |
-| Jira SEM4 | Epics, Stories, Tasks, Status, Schätzungen und Sprintzuordnung |
-| GitHub | Gemeinsamer Code, Dokumentation, Änderungsverlauf und Pipeline |
-| Markdown | Laufend lesbare fachliche und PM-Dokumentation |
-| Teams | Planning-/Review-Mitteilungen und Rückmeldungen der Dozierenden |
-| GitHub Actions, GHCR, Kubernetes und Helm | Technische Umsetzung des DevOps-Auftrags |
+| Lukas Sägesser | Projektleitung und Umsetzung |
+| Corrado Parisi | Projektmanagementdozent |
+| Armin Dörzbach | Fachdozent |
 
-### Stakeholder und Zusammenarbeit
+*Tabelle 02: Beteiligte.*
 
-Tabelle 03: Beteiligte und geplanter Einbezug.
+Jira führt Aufgaben und Status, GitHub Code und Dokumentation.
+Nach Planning und Review werden die Dozierenden über Teams informiert.
+Zugriffe und Versand sind noch offen.
 
-| Person / Gruppe | Rolle und Interesse | Einbezug |
-| --- | --- | --- |
-| Lukas Sägesser | Projektverantwortlicher und Entwickler; Umsetzung und Lernerfolg | Aufgabenpflege, Nachweise und laufende Dokumentation |
-| Corrado Parisi | Projektmanagementdozent; methodisches Vorgehen und Reflexion | Repo-/Board-Einsicht, Information nach Planning und Review |
-| Armin Dörzbach | Fachdozent; technische Qualität und Zielerreichung | Repo-/Board-Einsicht, Demos und fachliche Rückmeldungen |
-| Nutzende des DJ-Archivs | Verlässliche Bereitstellung und Erhalt ihrer Sets und Freigaben | Funktions- und Datenerhaltnachweise mit synthetischen Daten |
+### Vorgaben und Risiken
 
-Die Einladungen und Zugriffsbestätigungen stehen noch aus. Es werden keine
-Besprechungen, Rückmeldungen oder Zustimmungen vorweggenommen.
+Vorleistungen werden ausgewiesen. Tests verwenden getrennte Daten und Umgebungen;
+der bisherige produktive Betrieb bleibt geschützt. Hochverfügbarkeit und die
+persönliche Website gehören nicht zum Umfang.
 
-ASUS: technische Umsetzung und fachliche Nachweise. Arbeitslaptop: Planung,
-Dokumentation und Review. Beide arbeiten mit eigenen Klonen desselben Repositorys.
-Aufgaben werden über Jira abgegrenzt, Änderungen über Git synchronisiert.
-
-### SWOT und Risiken
-
-Tabelle 04: Einschätzung zum Projektstart.
-
-| Bereich | Einschätzung | Konsequenz für die Planung |
-| --- | --- | --- |
-| Stärke | Bestehende App, Tests und Docker-/Backup-Verfahren | DevOps-Erweiterung auf vorhandener Basis umsetzen |
-| Schwäche | Einzelarbeit, Stundenbudget offen, ein Projektlaptop | Umfang begrenzen, Kapazität klären und Reserve einplanen |
-| Chance | Eindeutig versionierte, reproduzierbare Releases | Antragsziele durch echte Pipeline- und Rückfallnachweise belegen |
-| Gefahr | Datenverlust, Runner-Missbrauch oder Laptop-Ausfall | Isolation, minimale Rechte, geprüfte Sicherung und Wiederaufbau |
-
-Wahrscheinlichkeit, Auswirkung, Massnahmen und Kontrollen stehen im
-[Risikoregister](Risiken.md). Die Einschätzungen werden bei jedem Review aktualisiert.
+Wesentliche Risiken sind Zeitüberschreitung, Laptop-Ausfall, Datenverlust und
+Runner-Missbrauch. Bewertung und Massnahmen stehen im Risikoregister.
+Die offiziellen Form- und Bewertungsvorgaben sind noch vollständig abzugleichen.
 
 ## Projektplanung
 
 ### Roadmap und Meilensteine
 
-Tabelle 05: Geplante Releases und Abschluss.
+| Abschnitt | Zeitraum | Geplanter Mehrwert |
+| --- | --- | --- |
+| Sprint 1 / MVP | 26.10.–15.11.2026 | Ziele zuordnen, Testbasis prüfen, begründete Testlücke schliessen |
+| Sprint 2 / MLP | 16.11.–13.12.2026 | Test-/Build-Pipeline, GHCR und Helm-Grundlage |
+| Sprint 3 / MMP | 14.12.2026–21.01.2027 | Deployment, Rollback, Datenerhalt und Restore |
+| Abschluss | 22.01.–27.01.2027 | Enddokumentation und Präsentation |
 
-| Abschnitt | Zeitraum | Geplanter Mehrwert | Status |
-| --- | --- | --- | --- |
-| Sprint 1 / MVP | 26.10.–15.11.2026 | Nachvollziehbare Ziele, geprüfte Testbasis und gezielte Testergänzung | Planning vorbereitet |
-| Sprint 2 / MLP | 16.11.–13.12.2026 | Geprüfte Commit-Images in GHCR und lokale Helm-Grundlage | Grobplanung |
-| Sprint 3 / MMP | 14.12.2026–21.01.2027 | Kontrolliertes Deployment, Rollback, Datenerhalt und Restore | Grobplanung |
-| Abschluss | 22.01.–27.01.2027 | Rückmeldungen, Enddokumentation und Präsentation | Geplant |
-
-```mermaid
-gantt
-    title Geplante Meilensteine SetFlow
-    dateFormat YYYY-MM-DD
-    axisFormat %d.%m.
-    section Umsetzung
-    Sprint 1 / MVP :s1, 2026-10-26, 2026-11-16
-    Sprint 2 / MLP :s2, 2026-11-16, 2026-12-14
-    Sprint 3 / MMP :s3, 2026-12-14, 2027-01-22
-    section Abschluss
-    Dokumentation und Präsentation :2027-01-22, 2027-01-28
-    Abgabe :milestone, 2027-01-27, 0d
-```
-
-Abbildung 01: Grobplanung; Balken enden an der Tagesgrenze nach dem letzten
-geplanten Arbeitstag. Die Darstellung ist kein Nachweis bereits geleisteter Arbeit.
-
-### Backlog und Kapazität
-
-Das [Product Backlog](Backlog.md) enthält zwölf Stories mit Kriterien und
-Abhängigkeiten. Jira bildet drei Epics ab; die [Ticketzuordnung](Jira-Abbildung.md)
-verbindet Plan-IDs und tatsächliche Vorgänge.
+*Tabelle 03: Roadmap.*
 
 Sprint 1 umfasst vorläufig 20 Punkte bzw. 22 Stunden plus 5 Stunden Reserve.
-Das Stundenbudget ist offen. Der Sprint bleibt bis zum Kapazitätsabgleich und
-endgültigen Commitment ungestartet. Sprint 2 und 3 werden vor ihrem Beginn verfeinert.
+Das verfügbare Zeitbudget und das endgültige Commitment sind offen.
+Sprint 2 und 3 werden vor ihrem Beginn verfeinert.
 
 ## Sprints
 
-[Alle Sprints im Überblick](00_Sprints/README.md)
-
-- [Sprint 1](00_Sprints/Sprint1/README.md): detailliertes Planning, sechs Stories
-  mit 18 Tasks; Review und Retrospektive noch offen.
-- [Sprint 2](00_Sprints/Sprint2/README.md): vorläufiges Ziel und Backlog; detailliertes
-  Planning erfolgt zum Sprintbeginn.
-- [Sprint 3](00_Sprints/Sprint3/README.md): vorläufiges Ziel und Backlog; detailliertes
-  Planning erfolgt zum Sprintbeginn.
+Die Sprintübersicht führt zu Planning, Review und Retrospektive.
+Sprint 1 ist detailliert vorbereitet; Sprint 2 und 3 sind Grobplanungen.
+Ergebnisse und Rückmeldungen werden nach Durchführung ergänzt.
 
 ## Kommunikation und Projektverlauf
 
-Die [Jira-Abbildung](Jira-Abbildung.md) enthält den Kommunikationsentwurf sowie
-den Stand der Dozentenzugriffe. Tatsächliche Kommunikation wird mit Datum,
-Adressaten, Ergebnis und Folgeaufgaben unter [Nachweise](Nachweise/README.md) verlinkt.
-Der [Projektstand](../docs/projektstand.md) nennt Erledigtes, Grenzen und nächste Schritte.
+Der Projektstand hält Erledigtes, offene Punkte und nächste Schritte fest.
+Kommunikationsnachweise enthalten Datum, Ergebnis und Folgeaufgaben.
+Der Git-Workflow regelt Aufgabenbranches, Conventional Commits und Eigenprüfung.
 
 ## Abschluss und Reflexion
 
-Der Projektabschluss steht aus. Zum Abschluss werden Zielerreichung,
-Aufwand gegenüber Planung, Methoden, Rückmeldungen und Verbesserungen anhand
-der tatsächlichen Sprintberichte reflektiert. Präsentation und Abgabeform werden
-mit den gültigen Schulvorgaben abgeglichen. Versionen sind über Git-Commits,
-Tags und Releases nachvollziehbar.
+Nach Abschluss werden Zielerreichung, Aufwand, Vorgehen und Verbesserungen anhand
+der tatsächlichen Ergebnisse beurteilt. Abgabe und Präsentation stehen noch aus.
 
-## Anhang und Verzeichnisse
+## Unterlagen
 
 - [Antrag](Antrag/README.md)
-- [Anhang und ergänzende Unterlagen](01_Anhang/README.md)
-- [Bilder](02_Bilder/README.md)
-- [PM-Nachweise](Nachweise/README.md)
-- [Fachlicher Teil](../Fachlich/README.md)
-- [Entscheidungsprotokoll](../docs/entscheidungen.md)
-
-### Abbildungsverzeichnis
-
-- Abbildung 01: Grobplanung SetFlow, Abschnitt «Roadmap und Meilensteine».
+- [Backlog und Akzeptanzkriterien](Backlog.md)
+- [Definition of Done](Definition-of-Done.md)
+- [Risiken](Risiken.md)
+- [Jira-Zuordnung und Kommunikationsentwurf](Jira-Abbildung.md)
+- [Git-Workflow](../.github/CONTRIBUTING.md)
+- [Anhang](01_Anhang/README.md)
 
 ### Tabellenverzeichnis
 
-- Tabelle 01: Projektziele gemäss Antrag.
-- Tabelle 02: Werkzeuge und Zuständigkeit der Ablagen.
-- Tabelle 03: Beteiligte und geplanter Einbezug.
-- Tabelle 04: Einschätzung zum Projektstart.
-- Tabelle 05: Geplante Releases und Abschluss.
-
-[Zur Startseite](../README.md)
+Tabelle 01: Projektziele. Tabelle 02: Beteiligte. Tabelle 03: Roadmap.
