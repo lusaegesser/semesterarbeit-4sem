@@ -24,7 +24,7 @@ RustDesk für Fernzugriff; Docker startet nach Windows-Anmeldung.
 
 ## Noch offen
 
-1. Privates GitHub-Repository semesterarbeit-4sem erstellen und origin verbinden/pushen.
+1. GitHub-Repository erstellt und origin verbunden; main erfolgreich gepusht: https://github.com/lusaegesser/semesterarbeit-4sem. Sichtbarkeit und Dozierenden-Zugriffe im GitHub-Konto prüfen.
 2. Finale angenommene Antragsdatei und Fachdozent hinterlegen.
 3. Jira-URL, Ticketpräfix, Zeitbudget und Definition of Done ergänzen.
 4. Neues Repository auf Arbeitslaptop klonen und auf beiden Geräten als lokales Codex-Projekt öffnen.
@@ -33,5 +33,5 @@ RustDesk für Fernzugriff; Docker startet nach Windows-Anmeldung.
 
 ## Nächster Schritt
 
-GitHub-Ablage fertigstellen, danach Antrag/Jira ergänzen und Sprint-1-Planning durchführen.
+Antrag/Jira ergänzen, Projekt auf beiden Laptops öffnen und Sprint-1-Planning durchführen.
 Kein Kubernetes oder Deployment ohne abgegrenzte Aufgabe implementieren.
