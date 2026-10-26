@@ -1,48 +1,75 @@
 # SetFlow – Semesterarbeit 4
 
-Aufbau einer DevOps-Pipeline für ein DJ-Set-Archiv.
+SetFlow erhält eine DevOps-Pipeline für ein bestehendes DJ-Set-Archiv:
+automatisierte Tests, versionierte Container-Images und kontrollierte
+Bereitstellung mit Helm in einem lokalen Kubernetes-Cluster.
 
-**Zeitraum:** 26.10.2026–27.01.2027. **Schwerpunkt:** DevOps.
-Projektmanagement ist Pflichtbestandteil; Kubernetes/Helm dienen als Zielumgebung.
-Die Annahme des Antrags wurde von Lukas bestätigt. Die finale angenommene Datei
-muss noch unter `Projektmanagement/Antrag/` abgelegt werden; sie hat Vorrang vor Planungsentwürfen.
+**Autor:** Lukas Sägesser · **Lehrgang:** ITCNE25, TBZ HF
+**Zeitraum:** 26.10.2026–27.01.2027 · **Schwerpunkt:** DevOps
+**Projektmanagementdozent:** Corrado Parisi · **Fachdozent:** Armin Dörzbach
 
-## Einstieg
+## Dokumentation
 
-- [Fachliche Dokumentation](Fachlich/Dokumentation.md)
-- [Projektmanagement](Projektmanagement/Dokumentation.md)
-- [Aktueller Projektstand](docs/projektstand.md)
-- [Entscheidungen](docs/entscheidungen.md)
-- [Regeln für Codex](AGENTS.md)
+| Bereich | Einstieg und Inhalt |
+| --- | --- |
+| **[Projektmanagement](Projektmanagement/README.md)** | Auftrag, Ziele, Stakeholder, Risiken, Planung und Reflexion |
+| **[Fachlicher Teil](Fachlich/README.md)** | Ausgangslage, Anforderungen, Architektur, Umsetzung, Tests und Betrieb |
+| [Sprints](Projektmanagement/00_Sprints/README.md) | Planning, Review und Retrospektive je Sprint |
+| [Projektstand](docs/projektstand.md) | Erledigtes, offene Punkte und nächste Schritte |
 
-App-Code, Tests und Deployment-Dateien bleiben an ihren bisherigen Pfaden.
-Die gemeinsame Semesterarbeitsdokumentation liegt unter Fachlich/ und Projektmanagement/.
-Jira verwaltet Aufgaben; GitHub verwaltet Code, Pipeline und Dokumentation.
+Die Gliederung folgt der Semesterarbeit 2 mit klaren Einstiegen und getrennten
+Detailnachweisen. Der [Lesepfad und die Repository-Struktur](docs/repository-struktur.md)
+erklären die Ablage.
 
-## Zwei Arbeitsplätze
+## Aktueller Einstieg
 
-ASUS: technische Umsetzung und fachliche Nachweise. Arbeitslaptop: Planung,
-Dokumentation, Reviews und Präsentation. Beide verwenden eigene lokale Klone
-desselben privaten GitHub-Repositorys. Keine synchronisierte Netzwerkablage.
+Sprint 1 ist [detailliert vorbereitet](Projektmanagement/00_Sprints/Sprint1/README.md).
+Sein Ziel ist eine überprüfbare Testbasis mit einer begründeten Testergänzung.
+Sprint 2 und 3 sind grob geplant. Stundenbudget und endgültiges Commitment sind offen;
+die Sprints wurden noch nicht gestartet.
 
-Vor Beginn `git pull --ff-only`, dann pro Aufgabe einen Branch verwenden.
-Änderungen prüfen, committen und pushen; vor Gerätewechsel abschliessen.
-Nicht gleichzeitig dieselben Dateien auf beiden Geräten ändern.
-Jira-Ticketkennung in Branch, Commit oder Pull Request aufnehmen.
+- [Jira SEM4 – Board 67](https://lukas-saegesser.atlassian.net/jira/software/projects/SEM4/boards/67/backlog)
+- [Product Backlog](Projektmanagement/Backlog.md)
+- [Antrag und Annahmestand](Projektmanagement/Antrag/README.md)
+- [Anforderungs- und Nachweismatrix](Fachlich/Anforderungsmatrix.md)
+- [Entscheidungsprotokoll](docs/entscheidungen.md)
 
-## Herkunft und Betrieb
+Jira führt Aufgaben und Status. GitHub enthält Code, Pipeline und Dokumentation.
+Das Repository bleibt vorerst privat; eine öffentliche Freigabe ist zum Abschluss vorgesehen.
 
-Ausgangsrepository: https://github.com/lusaegesser/dj-set-archive
-Übernommene Git-Historie: Ausgangscommit `08e83f3` vom 27.09.2026.
-Zusätzlich übernommen: lokale HTTPS-Vorbereitung (Compose, Caddy und Betriebsanleitung).
-Die frühere README steht unter `Fachlich/Ausgangslage/README-Vorprojekt.md`.
+## Code und technische Ablage
 
-Der bisherige produktive Betrieb unter `C:\repos\dj-set-archive` bleibt getrennt.
-In diesem neuen Repository fehlen absichtlich `.env`, Datenbank, Audiodateien,
-Backups, Passwort-Hashes und Caddy-Zertifikate. **Hier nicht ungeprüft Compose starten:**
-Die übernommene Konfiguration kann andernfalls auf bestehende Volumenamen und Ports zeigen.
+Anwendung, Tests und Betriebsdateien liegen an ihren bestehenden Pfaden:
 
-Vorleistungen umfassen App, Tests, bereits vorhandenen GitHub-Testworkflow,
-Docker-Betrieb, Backup/Restore und HTTPS. Neue Semesterarbeitsleistungen werden
-ab dem Projektstart getrennt dokumentiert. Kubernetes, Helm-Deployment,
-Registry-Veröffentlichung und lokaler Deployment-Runner sind noch zu prüfen/umzusetzen.
+`app/` · `frontend/` · `tests/` · `scripts/` · `.github/workflows/` · `deploy/`
+
+Die [fachliche Dokumentation](Fachlich/README.md#struktur-und-architektur) erläutert
+die Komponenten. Versionsstände werden über Git-Commits, Tags und Releases geführt.
+
+## Herkunft und laufender Betrieb
+
+Ausgangsrepository: [DJ-Set-Archiv](https://github.com/lusaegesser/dj-set-archive);
+übernommener Ausgangscommit `08e83f3` vom 27.09.2026. Vorleistungen umfassen App,
+Tests, bestehenden GitHub-Testworkflow, Docker-Betrieb, Backup/Restore und
+HTTPS-Vorbereitung. Details unter [Ausgangslage](Fachlich/Ausgangslage/README.md).
+
+Der produktive Alt-Checkout `C:\repos\dj-set-archive` bleibt getrennt.
+In diesem Repository fehlen absichtlich Secrets und Betriebsdaten.
+**Compose erst nach Prüfung von Projektname, Ports und Volumenamen starten.**
+Die übernommenen Dateien können auf bestehende Ports und Volumes zeigen.
+
+[Betriebsunterlagen und historische Protokolle](docs/README.md) beschreiben den
+bisherigen Stand. Neue technische Leistungen werden mit eigenen Nachweisen dokumentiert.
+
+## Zusammenarbeit
+
+Der [Git-Workflow](CONTRIBUTING.md) dokumentiert Branching, Conventional Commits,
+Eigenprüfung, Pull Requests und Releases für die Einzelarbeit.
+
+ASUS: technische Umsetzung und Nachweise. Arbeitslaptop: Planung, Dokumentation
+und Review. Beide verwenden eigene lokale Klone mit GitHub als gemeinsamer Ablage.
+
+Vor Arbeitsbeginn den Git-Status und den gemeinsamen Stand prüfen; bei sauberem
+Arbeitsstand mit `git pull --ff-only` aktualisieren. Pro Aufgabe einen Branch mit
+Jira-Bezug verwenden. Änderungen prüfen und vor Gerätewechsel abschliessen.
+Gleichzeitige Änderungen derselben Dateien vermeiden.

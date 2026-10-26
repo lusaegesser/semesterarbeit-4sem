@@ -1,37 +1,82 @@
 # Projektstand – 26.10.2026
 
-## Auftrag
+[Startseite](../README.md) · [Projektmanagement](../Projektmanagement/README.md) ·
+[Fachlicher Teil](../Fachlich/README.md) · [Entscheidungen](entscheidungen.md)
 
-Semesterarbeit 4: SetFlow, DevOps-Schwerpunkt. Antrag laut Lukas angenommen.
-Zeitraum 26.10.2026–27.01.2027, drei Sprints, Jira, zentrale GitHub-Ablage.
-Neue lokale Kopie: C:\repos\semesterarbeit-4sem.
+## Auftrag und Grundlagen
 
-## Vorbereitung abgeschlossen
+SetFlow, Semesterarbeit 4 mit DevOps-Schwerpunkt; Zeitraum 26.10.2026–27.01.2027.
+Die Annahme des [Antrags](../Projektmanagement/Antrag/README.md) hat Lukas bestätigt.
+Projektmanagementdozent: Corrado Parisi. Fachdozent: Armin Dörzbach.
 
-- Originalrepository mit Historie übernommen, Original nicht verändert.
-- Fachlich/ und Projektmanagement/ sowie Einstieg und Codex-Regeln vorbereitet.
-- Lokale Compose-/Caddy-Dateien übernommen, keine privaten Daten/Secrets kopiert.
-- Vorhandene pytest-/Container-CI als Vorleistung erkannt.
+## Erledigt
 
-## Historischer Betriebsstand (nicht heute erneut getestet)
+- Vorprojekt mit Git-Historie übernommen; App, Tests, vorhandene CI und bisherige
+  Betriebsverfahren als Vorleistungen ausgewiesen. Produktiver Alt-Checkout unberührt.
+- Dokumentation anhand Semesterarbeit 2 neu gegliedert: Startseite,
+  [PM-Hauptdokument](../Projektmanagement/README.md),
+  [fachliches Hauptdokument](../Fachlich/README.md), Sprintübersicht sowie
+  Anhang-, Bilder-, Medien- und Nachweisablagen mit Navigation.
+- [Sprint 1](../Projektmanagement/00_Sprints/Sprint1/README.md) mit Goal, Epics,
+  sechs Stories, 18 Tasks, MoSCoW, Commitment-Vorschlag und offenen Review-/Retro-Abschnitten
+  vorbereitet. Sprint 2/3 haben eigene als Grobplanung bezeichnete Seiten.
+- Backlog, DoD, Risikoregister und Anforderungsmatrix angelegt und verlinkt.
+- Jira befüllt und zurückgelesen: drei Epics (SEM4-3 bis SEM4-5), zwölf Stories,
+  18 Unteraufgaben und elf native Blockierungslinks. Drei Sprints mit Zielen und
+  geplanten Daten; alle Vorgänge «Zu erledigen», Sprints ungestartet.
+  [Ticketzuordnung](../Projektmanagement/Jira-Abbildung.md).
+- Lokale Arbeitsanweisungen bleiben ignoriert; bisherige Dokumentationspfade
+  führen auf die neuen Hauptdokumente weiter. Code- und Deploymentpfade bleiben bestehen.
+- [Git-Workflow](../CONTRIBUTING.md) gemäss DevOps-Unterricht für Einzelarbeit
+  dokumentiert. Publikationsweg: fünf logische Conventional Commits auf
+  `feature/SEM4-1-projektgrundlagen` mit Pull Request nach `main`.
 
-ASUS A17 / Windows 11 Home / Docker Desktop mit WSL 2.
-Produktive App im separaten Alt-Checkout C:\repos\dj-set-archive.
-sets.luukeez.com mit Caddy/Let's Encrypt, Router TCP 80/443 auf Laptop.
-Lokale IP war 192.168.178.47; öffentliche IP war dynamisch 178.193.53.47.
-App-Volume war dj-set-archive-restore-6554df730ee3, .env nur im Alt-Checkout.
-RustDesk für Fernzugriff; Docker startet nach Windows-Anmeldung.
+## Offen und Prüfgrenzen
 
-## Noch offen
+- Stundenbudget ist offen. Sprint 1 umfasst vorläufig 20 Punkte bzw. 22 Stunden
+  plus 5 Stunden Reserve; endgültiges Commitment und Sprintstart stehen aus.
+- GitHub-API bestätigt privates Repository, Hauptbranch `main` und Schreibrechte.
+  Für `main` wurde keine Branchschutz-Konfiguration abgerufen (HTTP 404).
+  Aktuelle CI-Ergebnisse und Integration sind am Pull Request zu prüfen;
+  ein offener PR ist keine bereits erfolgte Integration oder Abnahme.
+- Dozentenkonten, Einladungen, Zugriffsbestätigungen und tatsächliche Teams-Mitteilungen
+  fehlen noch. Ein Kommunikationsentwurf ist vorbereitet.
+- Offizielles Merkblatt A und Anwendbarkeit weiterer Form-/Bewertungsvorgaben
+  müssen abgeglichen werden.
+- Neue Test-/CI-Bestandsprüfung und technische Umsetzung stehen aus.
+  Die Dokumentationsaufgaben haben keine App-Tests, Container, Restore-Vorgänge
+  oder Deployments ausgeführt.
+- Vor öffentlicher Freigabe Dateistand und vollständige Git-Historie prüfen.
+  Frühere Commits bleiben vorerst unverändert.
+- Übernommene HTTPS-Unterlagen enthalten unterschiedliche historische Statusangaben.
+  Aktuellen Betrieb erst im Rahmen einer beauftragten Bestandsprüfung bestätigen.
 
-1. GitHub-Repository erstellt und origin verbunden; main erfolgreich gepusht: https://github.com/lusaegesser/semesterarbeit-4sem. Sichtbarkeit und Dozierenden-Zugriffe im GitHub-Konto prüfen.
-2. Finale angenommene Antragsdatei und Fachdozent hinterlegen.
-3. Jira-URL, Ticketpräfix, Zeitbudget und Definition of Done ergänzen.
-4. Neues Repository auf Arbeitslaptop klonen und auf beiden Geräten als lokales Codex-Projekt öffnen.
-5. Sprint 1 anhand tatsächlicher Vorleistungen planen; Testabdeckung und vorhandene CI prüfen.
-6. GitHub-Berechtigungen/Branchschutz und Umsetzungsgrenzen des Tarifs prüfen.
+## Prüfung dieser Strukturänderung
 
-## Nächster Schritt
+Inhalt und Dateistruktur der Semesterarbeit 2 bei Commit
+`7ed6b81d48abbcbc13c2a61d45b44804f8a8b2fe` über Git gelesen.
+Navigation und Hauptgliederung als Vorbild verwendet; Ergebnisse, Medien und
+Codeversionen der früheren Arbeit wurden nicht übernommen.
 
-Antrag/Jira ergänzen, Projekt auf beiden Laptops öffnen und Sprint-1-Planning durchführen.
-Kein Kubernetes oder Deployment ohne abgegrenzte Aufgabe implementieren.
+Lokale Linkprüfung einschliesslich Git-Workflow abgeschlossen: 37 Markdown-Dateien,
+223 lokale Verweise,
+keine fehlenden Ziele oder defekten Sprungmarken. `git diff --check` ohne Fehler;
+Code-, Test- und Deploymentdateien durch die Strukturänderung unverändert.
+Gezielte Prüfung typischer Secret-Muster ohne Treffer; Antrags-DOCX ohne VBA.
+Historische Detailstände bleiben im [Archiv](archiv/README.md) nachvollziehbar.
+
+## Nächste Schritte
+
+1. Stundenbudget klären, Sprintumfang bestätigen und Sprint 1 starten.
+2. PR und CI prüfen, Integration abschliessen; Dozentenkonten und Einladungsweg klären.
+3. Repo-/Board-Zugriffe ermöglichen und bestätigen lassen; Planning-Mitteilung versenden.
+4. P03 / SEM4-6: vorhandene Tests und CI mit isolierten Daten prüfen.
+5. Formvorgaben vervollständigen und tatsächliche Nachweise laufend nachführen.
+
+## Historische Grundlagen
+
+[Archivierter Zwischenstand vom 26.10.2026](archiv/projektstand-2026-10-26-vor-neugliederung.md) ·
+[Betriebsunterlagen und Vorprojektprotokolle](README.md#vorprojekt-und-historischer-betrieb) ·
+[Bestandsaufnahme](../Fachlich/Bestandsaufnahme-2026-10-26.md)
+
+Historische IPs, Volumenamen und Testergebnisse sind keine neu bestätigten Betriebsnachweise.

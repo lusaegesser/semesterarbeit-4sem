@@ -38,7 +38,7 @@ Ein lokales Testzertifikat bestaetigt diese oeffentliche Erreichbarkeit nicht.
 
 `python scripts/manage.py backup` funktioniert weiter mit dem bestehenden
 Archivvolume. Python muss auf dem Host verfuegbar sein; aktuell wurde fuer diese
-Verwaltungsbefehle der gebuendelte Codex-Python verwendet.
+Verwaltungsbefehle eine lokal bereitgestellte Python-Laufzeit verwendet.
 Die App-Sicherung enthaelt keine Caddy-Zertifikate. Deren Verlust erfordert eine
 erneute Zertifikatsausstellung; das caddy-data-Volume deshalb erhalten.
 
