@@ -1,0 +1,11 @@
+{
+    admin off
+    skip_install_trust
+}
+
+sets.luukeez.com {
+    # Empty during public operation; "tls internal" only in the isolated local test.
+    {$ARCHIVE_TLS}
+    # Access logging stays disabled so share tokens do not enter request logs.
+    reverse_proxy app:8000
+}

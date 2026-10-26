@@ -5,10 +5,26 @@ services:
       - "127.0.0.1:8000:8000"
     environment:
       DATA_DIR: /app/data
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
     volumes:
       - archive-data:/app/data
+    restart: unless-stopped
+  caddy:
+    image: caddy@sha256:d8542f48d34a9cf4e4c11a478865229840e87e4c96ea3f439101f31a5d35f75f
+    profiles: [https]
+    ports:
+      - "192.168.178.47:80:80"
+      - "192.168.178.47:443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - app
     restart: unless-stopped
 volumes:
   archive-data:
     name: ${ARCHIVE_VOLUME:-dj-set-archive_archive-data}
     external: ${ARCHIVE_VOLUME_EXTERNAL:-false}
+  caddy-data:
+  caddy-config:
