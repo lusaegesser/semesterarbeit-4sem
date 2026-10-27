@@ -1,12 +1,10 @@
-# Bilder zum Projektmanagement
+# Abbildungen zum Projektmanagement
 
-[Projektmanagement](../README.md) · [Sprints](../00_Sprints/README.md)
+| Abbildung | Verwendung |
+| --- | --- |
+| `2026-10-27-sprint-zeitachse.png` | Projektmanagement: Roadmap |
+| `2026-10-27-risikomatrix.png` | Risiken und Massnahmen |
+| `2026-10-27-swot.png` | SWOT-Analyse |
 
-Hier werden bereinigte Board-, Burndown- und Planungsabbildungen abgelegt.
-Derzeit sind noch keine Bildnachweise vorhanden. Die Roadmap steht im
-[PM-Hauptdokument](../README.md#roadmap-und-meilensteine).
-
-Dateien erhalten Datum und Thema, beispielsweise `2026-11-15-sprint1-board.png`.
-Jede verwendete Abbildung erhält eine Beschriftung und einen Eintrag im
-Abbildungsverzeichnis des zugehörigen Haupt- oder Sprintdokuments.
-Die Beispielbezeichnung ist kein bereits erstellter Nachweis.
+Die Abbildungen zeigen den Planungsstand vom 27.10.2026. Spätere Board-, Burndown-
+und Review-Abbildungen werden im jeweiligen Sprint dokumentiert.

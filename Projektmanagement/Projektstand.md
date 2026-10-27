@@ -9,14 +9,16 @@
 - Vorarbeits-Stories samt Unteraufgaben aus dem laufenden Jira-Sprint entfernt.
 - Sprintziel aktualisiert; Start, Ende und Bearbeitungsstatus beibehalten.
 - Spätere Auswertungen als leere Platzhalter vorbereitet.
-- Sprint-1-Planning abgeschlossen; Jira-Zugriff der Dozierenden eingerichtet.
+- Sprint-1-Planning abgeschlossen und über Teams abgegeben; Jira-Zugriff der Dozierenden eingerichtet.
 - GitHub-Startseite im Teams-Kanal verlinkt.
 - Veröffentlichungsprüfung durchgeführt; bestehende Historie und Metadaten werden beibehalten.
+
+- Risikomatrix, SWOT-Analyse und Sprint-Zeitachse erstellt und eingebunden.
 
 ## Offen
 
 - Repository öffentlich schalten.
-- Planning-Mitteilung über Teams abschliessen.
+
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
 - Technische Stories umsetzen und Ergebnisse nachweisen.
 
@@ -25,6 +27,7 @@
 Jira: 33 Vorgänge zurückgelesen; Zuordnung, Story Points und unveränderte
 Status geprüft. Sprint 1 bleibt aktiv mit drei Stories und neun Unteraufgaben.
 Lokale Dokumentlinks und Änderungen auf Formatfehler geprüft.
+Abbildungen visuell geprüft; Risikowerte und Sprinttermine mit den Tabellen abgeglichen.
 
 Die technischen Prüfungen vom 26.10.2026 bleiben unter
 `Fachlich/Nachweise/2026-10-26-repository-struktur.md` dokumentiert.
@@ -32,4 +35,4 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-Planning über Teams abgeben; anschliessend P03 zur Testabdeckung bearbeiten.
+P03 zur Testabdeckung bearbeiten.

@@ -1,6 +1,6 @@
 # Risiken und Massnahmen
 
-Stand: 26.10.2026. Verantwortlich für Überwachung und Umsetzung: Lukas Sägesser.
+Stand: 27.10.2026. Verantwortlich für Überwachung und Umsetzung: Lukas Sägesser.
 Bewertung: Wahrscheinlichkeit und Auswirkung je 1 (gering) bis 3 (hoch), Produkt
 1–2 gering, 3–4 mittel, 6–9 hoch. Vorläufige Einschätzung; bei jedem Review prüfen.
 
@@ -18,3 +18,13 @@ Tabelle 1: Risikoregister.
 
 Getrennter Backup-Speicher ist im Antrag vorgesehen, aber noch nicht als eingerichtet
 nachgewiesen. GitHub schützt Quellcode; es ersetzt keine Sicherung der Betriebsdaten.
+
+## Risikomatrix
+
+![Risikomatrix mit R01 bei W3/A3, R02–R06 bei W2/A3 und R07 bei W2/A2](02_Bilder/2026-10-27-risikomatrix.png)
+
+*Abbildung 01: Einordnung der Risiken gemäss Risikoregister. Die Werte entsprechen der Ausgangsbewertung vor Massnahmen.*
+
+## Abbildungsverzeichnis
+
+Abbildung 01: Einordnung der Risiken gemäss Risikoregister.

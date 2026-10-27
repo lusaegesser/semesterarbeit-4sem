@@ -64,6 +64,10 @@ Die offiziellen Form- und Bewertungsvorgaben sind noch vollständig abzugleichen
 
 *Tabelle 03: Roadmap.*
 
+![Zeitachse der drei Sprints vom 26.10.2026 bis 21.01.2027](02_Bilder/2026-10-27-sprint-zeitachse.png)
+
+*Abbildung 01: Geplante Laufzeiten der drei Umsetzungssprints.*
+
 Sprint 1 umfasst 12 Story Points: zwei technische Stories und begleitendes Review/Retrospektive.
 Sprint 2 und 3 werden vor ihrem Beginn verfeinert.
 
@@ -90,6 +94,7 @@ der tatsächlichen Ergebnisse beurteilt. Abgabe und Präsentation stehen noch au
 - [Backlog und Akzeptanzkriterien](Backlog.md)
 - [Definition of Done](Definition-of-Done.md)
 - [Risiken](Risiken.md)
+- [SWOT-Analyse](SWOT.md)
 - [Jira-Zuordnung und Kommunikationsentwurf](Jira-Abbildung.md)
 - [Git-Workflow](../.github/CONTRIBUTING.md)
 - [Anhang](01_Anhang/README.md)
@@ -97,3 +102,7 @@ der tatsächlichen Ergebnisse beurteilt. Abgabe und Präsentation stehen noch au
 ### Tabellenverzeichnis
 
 Tabelle 01: Projektziele. Tabelle 02: Beteiligte. Tabelle 03: Roadmap.
+
+### Abbildungsverzeichnis
+
+Abbildung 01: Geplante Laufzeiten der drei Umsetzungssprints.
