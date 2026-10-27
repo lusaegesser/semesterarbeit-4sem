@@ -9,11 +9,14 @@
 - Vorarbeits-Stories samt Unteraufgaben aus dem laufenden Jira-Sprint entfernt.
 - Sprintziel aktualisiert; Start, Ende und Bearbeitungsstatus beibehalten.
 - Spätere Auswertungen als leere Platzhalter vorbereitet.
+- Sprint-1-Planning abgeschlossen; Jira-Zugriff der Dozierenden eingerichtet.
+- GitHub-Startseite im Teams-Kanal verlinkt.
+- Veröffentlichungsprüfung durchgeführt; bestehende Historie und Metadaten werden beibehalten.
 
 ## Offen
 
-- Angepasstes Planning prüfen und veröffentlichen.
-- Dozentenzugriffe und Planning-Mitteilung abschliessen.
+- Repository öffentlich schalten.
+- Planning-Mitteilung über Teams abschliessen.
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
 - Technische Stories umsetzen und Ergebnisse nachweisen.
 
@@ -29,4 +32,4 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-Planning prüfen und abgeben; anschliessend P03 zur Testabdeckung bearbeiten.
+Planning über Teams abgeben; anschliessend P03 zur Testabdeckung bearbeiten.

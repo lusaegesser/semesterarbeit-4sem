@@ -39,7 +39,7 @@ Für alle Stories gilt eine gemeinsame Definition of Done.
 
 Jira führt Aufgaben und Status, GitHub Code und Dokumentation.
 Nach Planning und Review werden die Dozierenden über Teams informiert.
-Zugriffe und Versand sind noch offen.
+Jira-Zugriff für die Dozierenden ist eingerichtet. GitHub ist im Teams-Kanal verlinkt.
 
 ### Vorgaben und Risiken
 
@@ -70,7 +70,7 @@ Sprint 2 und 3 werden vor ihrem Beginn verfeinert.
 ## Sprints
 
 Die Sprintübersicht führt zu Planning, Review und Retrospektive.
-Sprint 1 ist detailliert vorbereitet; Sprint 2 und 3 sind Grobplanungen.
+Das Planning für Sprint 1 ist abgeschlossen; Sprint 2 und 3 sind Grobplanungen.
 Ergebnisse und Rückmeldungen werden nach Durchführung ergänzt.
 
 ## Kommunikation und Projektverlauf
