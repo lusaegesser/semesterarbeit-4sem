@@ -1,46 +1,35 @@
 # Product Backlog
 
-Stand: 26.10.2026. Verantwortlich: Lukas Sägesser. Alle Einträge sind Must-Ziele des
-Antrags bzw. notwendige PM-Arbeit. Zusätzliche App-Funktionen, Hochverfügbarkeit und
-persönliche Website sind ausserhalb des Umfangs (Won’t). Verbesserungen ohne
-Antragsbezug werden erst nach den Must-Zielen bewertet.
+Stand: 27.10.2026. Priorisierung mit MoSCoW und relative Schätzung mit Story Points; keine Stundenschätzungen.
+MoSCoW beschreibt die Wichtigkeit, nicht den Aufwand. Sprint 2/3 sind Grobplanungen.
 
-Plan-IDs P01–P12 sind stabile lokale Referenzen, keine erfundenen Jira-Tickets.
-Punkte (Fibonacci) und Stunden sind vorläufige Schätzungen. Kapazität ist offen.
-Sprint 2/3 sind eine Grobplanung und werden beim jeweiligen Planning neu bewertet.
+Repository, Jira-Board, Backlog, Zielzuordnung und Dozentenzugriffe zählen zur
+Vorarbeit (Sprint 0). Dafür wird kein eigener Jira-Sprint und kein Sprintbericht
+geführt. Bestehende Vorgänge bleiben ohne Sprintzuordnung erhalten.
 
-Die zwölf Stories sind in Jira erfasst und drei Epics zugeordnet; Kennungen siehe
-[Jira-Abbildung](Jira-Abbildung.md). Die 18 Sprint-1-Unteraufgaben und Task-Tabellen
-stehen in der [Sprint-Dokumentation](00_Sprints/Sprint1/README.md).
-Task-Aufwand ist in den Story-Schätzungen enthalten.
+| Plan-ID | Jira | Story | Zuordnung | Story Points | MoSCoW |
+| --- | --- | --- | --- | ---: | --- |
+| P01 | SEM4-1 | Repository und Projektgrundlagen | Vorarbeit | 3 | Must |
+| P02 | SEM4-2 | Antragsziele und Nachweise | Vorarbeit | 3 | Must |
+| P05 | SEM4-8 | Dozentenzugriffe und Kommunikation | Vorarbeit | 2 | Must |
+| P03 | SEM4-6 | Tests und CI isoliert prüfen | Sprint 1 | 5 | Must |
+| P04 | SEM4-7 | Testlücke schliessen | Sprint 1 | 5 | Must |
+| P06 | SEM4-9 | Review und Retrospektive | Sprint 1, begleitendes PM | 2 | Must |
+| P07 | SEM4-10 | Tests mit GHCR-Publish verbinden | Sprint 2 | 8 | Must |
+| P08 | SEM4-11 | Kubernetes und Helm vorbereiten | Sprint 2 | 8 | Must |
+| P09 | SEM4-12 | Deployment-Runner begrenzen | Sprint 3 | 5 | Must |
+| P10 | SEM4-13 | Deployment, Smoke-Test und Rollback | Sprint 3 | 8 | Must |
+| P11 | SEM4-14 | Datenerhalt und Restore | Sprint 3 | 8 | Must |
+| P12 | SEM4-15 | MMP und Abschlussunterlagen | Sprint 3, begleitendes PM | 5 | Must |
 
-Tabelle 1: Priorisierte Roadmap.
-
-| Plan-ID | Story | Sprint | Punkte | Stunden |
-| --- | --- | ---: | ---: | ---: |
-| P01 | Repository und Projektgrundlagen vorbereiten | 1 | 3 | 4 |
-| P02 | Antragsziele und Nachweise zuordnen | 1 | 3 | 3 |
-| P03 | Vorhandene Tests und CI isoliert prüfen | 1 | 5 | 5 |
-| P04 | Erkannte Testlücke gezielt schliessen | 1 | 5 | 6 |
-| P05 | Dozentenzugriffe und Planning-Kommunikation vorbereiten | 1 | 2 | 2 |
-| P06 | MVP-Review und Retrospektive durchführen | 1 | 2 | 2 |
-| P07 | Tests mit versioniertem GHCR-Publish verbinden | 2 | 8 | 10 |
-| P08 | Lokale Kubernetes- und Helm-Zielumgebung vorbereiten | 2 | 8 | 10 |
-| P09 | Lokalen Deployment-Runner begrenzen | 3 | 5 | 7 |
-| P10 | Deployments mit Smoke-Test und Rollback nachweisen | 3 | 8 | 10 |
-| P11 | Datenerhalt und isolierten Restore nachweisen | 3 | 8 | 10 |
-| P12 | MMP und Abschlussunterlagen vorbereiten | 3 | 5 | 7 |
-
-Sprint 2 endet am 13.12.2026; Sprint 3 am 21.01.2027. P12 enthält laufende
-Review-Arbeit sowie den Abschluss vom 22.–27.01.2027. Das Abschlussfenster ist
-kein vierter Umsetzungssprint. Review/Retro für Sprint 2 und 3 jeweils zum
-Sprintende durchführen und im Planning als Aufwand berücksichtigen.
+Abschlussfenster: 22.–27.01.2027 für Enddokumentation und Präsentation.
+Zusätzliche App-Funktionen und Hochverfügbarkeit gehören nicht zum Umfang (Won’t).
 
 ## P01 – Repository und Projektgrundlagen vorbereiten
 
 Als Projektverantwortlicher möchte ich eine verständliche gemeinsame Ablage, damit Dozierende Ziele und Fortschritt beurteilen können.
 
-Sprint 1; Must; 3 Punkte; 4 Stunden (vorläufig).
+Vorarbeit (Sprint 0); **Story Points: 3 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -53,7 +42,7 @@ Akzeptanzkriterien:
 
 Als Fachdozent möchte ich messbare Antragsziele den geplanten Nachweisen zuordnen können, damit die Zielerreichung überprüfbar ist.
 
-Sprint 1; Must; 3 Punkte; 3 Stunden (vorläufig).
+Vorarbeit (Sprint 0); **Story Points: 3 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -65,7 +54,7 @@ Akzeptanzkriterien:
 
 Als Entwickler möchte ich den tatsächlichen Test- und CI-Stand kennen, damit ich gezielte Verbesserungen statt Doppelarbeit plane.
 
-Sprint 1; Must; 5 Punkte; 5 Stunden (vorläufig).
+Sprint 1; **Story Points: 5 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -78,7 +67,7 @@ Akzeptanzkriterien:
 
 Als Entwickler möchte ich eine nachgewiesene Testlücke schliessen, damit Regressionen früher erkannt werden.
 
-Sprint 1; Must; 5 Punkte; 6 Stunden (vorläufig).
+Sprint 1; **Story Points: 5 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -91,20 +80,20 @@ Akzeptanzkriterien:
 
 Als Projektverantwortlicher möchte ich Repo und Board für die Dozierenden zugänglich vorbereiten, damit frühes Feedback möglich wird.
 
-Sprint 1; Must; 2 Punkte; 2 Stunden (vorläufig).
+Vorarbeit (Sprint 0); **Story Points: 2 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
 - [ ] Repo- und Board-Link sowie Rollen Corrado/Armin sind dokumentiert.
 - [ ] Einladungsweg und verfügbare Leserechte sind geprüft; tatsächliche Einladungen/Zugriff bleiben bis Durchführung offen.
-- [ ] Planning-Mitteilung enthält Sprintziel, vorläufige Schätzungen, Umfang und offene Kapazität.
+- [ ] Planning-Mitteilung enthält Sprintziel, Umfang und MoSCoW-Prioritäten.
 - [ ] Versand und Zugriffsbestätigung werden nach Durchführung erfasst.
 
 ## P06 – MVP-Review und Retrospektive durchführen
 
 Als Projektverantwortlicher möchte ich den ersten Mehrwert prüfen und reflektieren, damit Sprint 2 auf tatsächlichen Erkenntnissen aufbaut.
 
-Sprint 1; Must; 2 Punkte; 2 Stunden (vorläufig).
+Sprint 1; **Story Points: 2 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -117,7 +106,7 @@ Akzeptanzkriterien:
 
 Als Entwickler möchte ich geprüfte Commit-Images automatisch veröffentlichen, damit deploybare Versionen eindeutig nachvollziehbar sind.
 
-Sprint 2; Must; 8 Punkte; 10 Stunden (vorläufig).
+Sprint 2; **Story Points: 8 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -130,7 +119,7 @@ Akzeptanzkriterien:
 
 Als Betreiber möchte ich eine begründete lokale Zielumgebung, damit SetFlow reproduzierbar bereitgestellt werden kann.
 
-Sprint 2; Must; 8 Punkte; 10 Stunden (vorläufig).
+Sprint 2; **Story Points: 8 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -143,7 +132,7 @@ Akzeptanzkriterien:
 
 Als Betreiber möchte ich nur vertrauenswürdige Deployments zulassen, damit Runner und Cluster geschützt bleiben.
 
-Sprint 3; Must; 5 Punkte; 7 Stunden (vorläufig).
+Sprint 3; **Story Points: 5 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -156,7 +145,7 @@ Akzeptanzkriterien:
 
 Als Betreiber möchte ich geprüfte Releases und einen Rückfall, damit Änderungen kontrolliert ausgeliefert werden.
 
-Sprint 3; Must; 8 Punkte; 10 Stunden (vorläufig).
+Sprint 3; **Story Points: 8 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -169,7 +158,7 @@ Akzeptanzkriterien:
 
 Als Nutzer möchte ich meine Sets und Freigaben behalten, damit Pod-Wechsel und Wiederherstellung keine Daten verlieren.
 
-Sprint 3; Must; 8 Punkte; 10 Stunden (vorläufig).
+Sprint 3; **Story Points: 8 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -182,7 +171,7 @@ Akzeptanzkriterien:
 
 Als Projektverantwortlicher möchte ich Zielerreichung und Erkenntnisse nachvollziehbar abschliessen, damit die Arbeit beurteilt werden kann.
 
-Sprint 3; Must; 5 Punkte; 7 Stunden (vorläufig).
+Sprint 3; **Story Points: 5 · MoSCoW: Must**.
 
 Akzeptanzkriterien:
 
@@ -193,7 +182,8 @@ Akzeptanzkriterien:
 
 ## Abhängigkeiten
 
-P01 → P02 → P03 → P04 → P06. P05 läuft früh begleitend.
+Vorarbeit: P01 → P02; P05 begleitet die Einrichtung.
+Sprint 1: P03 → P04 → P06.
 P03/P04 → P07; P02 → P08; P07/P08 → P09 → P10 → P11.
 P12 begleitet Reviews und bündelt den Abschluss; Ergebnisse nicht erst am Ende dokumentieren.
 

@@ -1,38 +1,32 @@
-# Projektstand – 26.10.2026
+# Projektstand – 27.10.2026
 
 ## Erledigt
 
-- Antrag, Ziele, Backlog, DoD und Risiken dokumentiert.
-- Drei Sprints vorbereitet; Sprint 1 mit sechs Stories und 18 Tasks.
-- Jira-Zuordnung mit drei Epics, zwölf Stories und elf Abhängigkeiten erfasst.
-- Dokumentation in Projektmanagement und Fachliches gegliedert.
-- App, Tests, Skripte und Containerdateien nach `Fachlich/Anwendung/` verschoben.
-- CI-Arbeitsordner und Dependency-Cache an die neue Struktur angepasst.
-- Startseite auf Projektbeschreibung und die beiden Hauptbereiche reduziert.
+- Repository und Dokumentation gegliedert; Änderungen vom 26.10.2026 in `main` integriert.
+- Vorarbeiten von den drei technischen Umsetzungssprints getrennt.
+- Sprint 1 auf Test-/CI-Prüfung und Testergänzung ausgerichtet; Review/Retro begleiten die Umsetzung.
+- Story Points und MoSCoW in Planning, Backlog und Jira; keine Stundenaufwände.
+- Vorarbeits-Stories samt Unteraufgaben aus dem laufenden Jira-Sprint entfernt.
+- Sprintziel aktualisiert; Start, Ende und Bearbeitungsstatus beibehalten.
+- Spätere Auswertungen als leere Platzhalter vorbereitet.
 
 ## Offen
 
-- Zeitbudget und verbleibenden Sprintumfang bestätigen; Sprint 1 starten.
-- Dozentenzugriffe und Planning-Mitteilung durchführen.
+- Angepasstes Planning prüfen und veröffentlichen.
+- Dozentenzugriffe und Planning-Mitteilung abschliessen.
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
-- Testabdeckung beurteilen und DevOps-Pipeline weiterentwickeln.
-- Cluster, Runner, Deployments, Rollback und Datenerhalt nachweisen.
+- Technische Stories umsetzen und Ergebnisse nachweisen.
 
-## Prüfung der Umstrukturierung
+## Prüfungen
 
-Die Anwendungsdateien wurden zunächst unverändert verschoben. Docker-Buildkontext,
-Frontend-Pfad, Testimporte und relative Skriptpfade beziehen sich weiterhin auf
-denselben gemeinsamen Anwendungsordner. Compose erhält einen eigenen Projektnamen
-und ein eigenes Standardvolume.
+Jira: 33 Vorgänge zurückgelesen; Zuordnung, Story Points und unveränderte
+Status geprüft. Sprint 1 bleibt aktiv mit drei Stories und neun Unteraufgaben.
+Lokale Dokumentlinks und Änderungen auf Formatfehler geprüft.
 
-20 vorhandene Tests bestanden. Docker-Build sowie isolierte Prüfungen von Health,
-Oberfläche und Zugriffsschutz erfolgreich. Compose-Konfiguration und lokale
-Dokumentlinks geprüft. Der Nachweis liegt unter
-`Fachlich/Nachweise/2026-10-26-repository-struktur.md`.
-Der bisherige produktive Checkout und seine Daten bleiben unverändert.
+Die technischen Prüfungen vom 26.10.2026 bleiben unter
+`Fachlich/Nachweise/2026-10-26-repository-struktur.md` dokumentiert.
+Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausgeführt.
 
-## Veröffentlichung
+## Nächster Schritt
 
-Die Änderung wird in wenigen logischen Commits über den bestehenden Pull Request
-integriert. Nach erfolgreichen Prüfungen wird `main` aktualisiert, damit die
-normale Repository-Startseite den aktuellen Stand zeigt.
+Planning prüfen und abgeben; anschliessend P03 zur Testabdeckung bearbeiten.
