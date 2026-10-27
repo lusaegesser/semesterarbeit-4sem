@@ -24,8 +24,9 @@ Der Antrag ist abgelegt.
 
 ### Vorgehen und Beteiligte
 
-Drei agile Sprints, MoSCoW-Priorisierung und Fibonacci-Schätzungen.
-Story Points vergleichen Komplexität; Stunden dienen der Kapazitätsplanung.
+Drei technisch ausgerichtete Sprints mit Story Points und MoSCoW-Priorisierung.
+Repository-Einrichtung, Jira-Board, Backlog und Dozentenzugriffe sind Vorarbeit
+(Sprint 0) ohne eigenen Sprintbericht.
 Für alle Stories gilt eine gemeinsame Definition of Done.
 
 | Person | Rolle |
@@ -56,15 +57,14 @@ Die offiziellen Form- und Bewertungsvorgaben sind noch vollständig abzugleichen
 
 | Abschnitt | Zeitraum | Geplanter Mehrwert |
 | --- | --- | --- |
-| Sprint 1 / MVP | 26.10.–15.11.2026 | Ziele zuordnen, Testbasis prüfen, begründete Testlücke schliessen |
+| Sprint 1 / MVP | 26.10.–15.11.2026 | Testbasis und CI prüfen, begründete Testlücke schliessen |
 | Sprint 2 / MLP | 16.11.–13.12.2026 | Test-/Build-Pipeline, GHCR und Helm-Grundlage |
 | Sprint 3 / MMP | 14.12.2026–21.01.2027 | Deployment, Rollback, Datenerhalt und Restore |
 | Abschluss | 22.01.–27.01.2027 | Enddokumentation und Präsentation |
 
 *Tabelle 03: Roadmap.*
 
-Sprint 1 umfasst vorläufig 20 Punkte bzw. 22 Stunden plus 5 Stunden Reserve.
-Das verfügbare Zeitbudget und das endgültige Commitment sind offen.
+Sprint 1 umfasst 12 Story Points: zwei technische Stories und begleitendes Review/Retrospektive.
 Sprint 2 und 3 werden vor ihrem Beginn verfeinert.
 
 ## Sprints
