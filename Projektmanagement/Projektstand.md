@@ -1,4 +1,4 @@
-# Projektstand – 27.10.2026
+# Projektstand – 01.11.2026
 
 ## Erledigt
 
@@ -14,6 +14,10 @@
 - Veröffentlichungsprüfung durchgeführt; bestehende Historie und Metadaten werden beibehalten.
 
 - Risikomatrix, SWOT-Analyse und Sprint-Zeitachse erstellt und eingebunden.
+- P03 fachlich geprüft: 20 bestehende Tests und isolierter Container-Smoke-Test
+  bestanden; beide GitHub-Jobs für Commit `68d506d` erfolgreich. Abdeckung und
+  Passwort-Unit-Testlücke für P04 sind im [Prüfprotokoll](../Fachlich/Nachweise/2026-10-27-P03-tests-ci.md)
+  dokumentiert. Tests und Workflow bleiben Vorleistung.
 
 ## Offen
 
@@ -21,6 +25,8 @@
 
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
 - Technische Stories umsetzen und Ergebnisse nachweisen.
+- P04 ist noch nicht umgesetzt. Die Versionierung des P03-Nachweises wurde am
+  01.11.2026 freigegeben; Abschluss mit Commit und CI-Nachweis wird in SEM4-6 verlinkt.
 
 ## Prüfungen
 
@@ -35,4 +41,4 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-P03 zur Testabdeckung bearbeiten.
+P04 mit direkten Passwort-Unit-Tests gemäss Antragsziel A02 bearbeiten.

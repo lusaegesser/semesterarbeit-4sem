@@ -60,6 +60,11 @@ Tests verwenden isolierte Daten und Umgebungen. Protokolle enthalten Datum,
 Commit, Voraussetzung, Schritte, Soll/Ist, Ergebnis und Grenzen.
 Private Aufnahmen, Zugangsdaten und Backup-Archive gehören nicht ins Repository.
 
+[P03-Bestandsprüfung vom 27.10.2026](Nachweise/2026-10-27-P03-tests-ci.md):
+20 bestehende Tests und Container-Smoke-Test bestanden; GitHub-Jobs desselben
+Commits erfolgreich. Direkte Passwort-Unit-Tests sind als Lücke für P04 begründet.
+Die bestehenden Tests bleiben Vorleistung.
+
 ## Betrieb und Rückfall
 
 Die übernommenen Anleitungen beziehen sich auf den bisherigen Compose-Betrieb.

@@ -6,6 +6,7 @@ Hier werden neue Testprotokolle und bereinigte Ergebnisse der Semesterarbeit 4
 abgelegt.
 
 - [Prüfung der Repository-Struktur vom 26.10.2026](2026-10-26-repository-struktur.md)
+- [P03: bestehende Tests und CI vom 27.10.2026](2026-10-27-P03-tests-ci.md)
 
 Tabelle 01: Geplante Nachweisgruppen.
 
