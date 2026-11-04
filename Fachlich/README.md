@@ -65,6 +65,10 @@ Private Aufnahmen, Zugangsdaten und Backup-Archive gehören nicht ins Repository
 Commits erfolgreich. Direkte Passwort-Unit-Tests sind als Lücke für P04 begründet.
 Die bestehenden Tests bleiben Vorleistung.
 
+[P04-Ergänzung vom 04.11.2026](Nachweise/2026-11-04-P04-passworttests.md):
+sieben direkte Passwort-Testfälle ergänzt; insgesamt 27 Tests lokal bestanden.
+Der GitHub-CI-Nachweis für die Ergänzung steht bis zum Push aus.
+
 ## Betrieb und Rückfall
 
 Die übernommenen Anleitungen beziehen sich auf den bisherigen Compose-Betrieb.

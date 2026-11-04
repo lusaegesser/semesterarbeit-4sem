@@ -27,7 +27,9 @@
 
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
 - Technische Stories umsetzen und Ergebnisse nachweisen.
-- P04 ist noch nicht umgesetzt.
+- P04: sieben Passwort-Unit-Testfälle ergänzt (A02), alle sieben und die gesamte
+  Suite mit 27 Tests lokal bestanden. [Nachweis](../Fachlich/Nachweise/2026-11-04-P04-passworttests.md).
+  Remote-CI, Commit/Push und Versionierungslink sind noch offen; Jira bleibt In Arbeit.
 
 ## Prüfungen
 
@@ -42,4 +44,5 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-P04 mit direkten Passwort-Unit-Tests gemäss Antragsziel A02 bearbeiten.
+P04-Änderungen nach Freigabe versionieren und pushen, GitHub-CI prüfen und erst
+danach die Story abschliessen. Anschliessend P06 vorbereiten.
