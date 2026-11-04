@@ -20,6 +20,9 @@
   dokumentiert. Tests und Workflow bleiben Vorleistung.
 
 - P03 / SEM4-6 abgeschlossen (Jira: Erledigt); Ergebnis im Sprint-1-Review erfasst.
+- P04 / SEM4-7 und Unteraufgaben abgeschlossen: sieben neue Passwort-Unit-Testfälle
+  zu A02, insgesamt 27 Tests lokal und Container-Smoke-Test bestanden.
+  Commit `22b3560`, GitHub-CI erfolgreich; [Nachweis](../Fachlich/Nachweise/2026-11-04-P04-passworttests.md).
 
 ## Offen
 
@@ -27,9 +30,6 @@
 
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
 - Technische Stories umsetzen und Ergebnisse nachweisen.
-- P04: sieben Passwort-Unit-Testfälle ergänzt (A02), alle sieben und die gesamte
-  Suite mit 27 Tests lokal bestanden. [Nachweis](../Fachlich/Nachweise/2026-11-04-P04-passworttests.md).
-  Remote-CI, Commit/Push und Versionierungslink sind noch offen; Jira bleibt In Arbeit.
 
 ## Prüfungen
 
@@ -44,5 +44,5 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-P04-Änderungen nach Freigabe versionieren und pushen, GitHub-CI prüfen und erst
-danach die Story abschliessen. Anschliessend P06 vorbereiten.
+P06 vorbereiten: MVP-Demo und Soll-Ist-Vergleich auf Basis der abgeschlossenen
+Stories P03 und P04; Review und Retrospektive tatsächlich durchführen.

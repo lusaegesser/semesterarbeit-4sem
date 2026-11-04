@@ -163,7 +163,7 @@ Tabelle 06: Soll-Ist-Vergleich.
 | Story | Erwartetes Ergebnis | Ist / Akzeptanzkriterien | Nachweis |
 | --- | --- | --- | --- |
 | P03 / SEM4-6 | Tests und CI isoliert prüfen | Abgeschlossen, 5 SP. Alle vier Akzeptanzkriterien erfüllt: 20 Tests und isolierter Container-Smoke-Test bestanden, CI erfolgreich, Abdeckung zugeordnet und Passwort-Unit-Testlücke für P04 identifiziert. | [Prüfprotokoll](../../../Fachlich/Nachweise/2026-10-27-P03-tests-ci.md); Commit `a4dc1b8`; Jira: Erledigt |
-| P04 / SEM4-7 | Testlücke schliessen | | |
+| P04 / SEM4-7 | Testlücke schliessen | Abgeschlossen, 5 SP. Sieben direkte Passwort-Testfälle ergänzt; 27 Tests lokal, Container-Smoke-Test und GitHub-CI erfolgreich. | [Prüfprotokoll](../../../Fachlich/Nachweise/2026-11-04-P04-passworttests.md); Commit `22b3560`; Jira: Erledigt |
 | P06 / SEM4-9 | Review und Retrospektive | | |
 
 ### Rückmeldungen und Folgeaufgaben

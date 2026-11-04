@@ -67,7 +67,7 @@ Die bestehenden Tests bleiben Vorleistung.
 
 [P04-Ergänzung vom 04.11.2026](Nachweise/2026-11-04-P04-passworttests.md):
 sieben direkte Passwort-Testfälle ergänzt; insgesamt 27 Tests lokal bestanden.
-Der GitHub-CI-Nachweis für die Ergänzung steht bis zum Push aus.
+Die Ergänzung ist versioniert; der verlinkte GitHub-CI-Lauf ist erfolgreich.
 
 ## Betrieb und Rückfall
 

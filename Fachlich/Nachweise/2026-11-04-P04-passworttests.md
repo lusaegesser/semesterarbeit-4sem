@@ -60,7 +60,8 @@ Volumes blieben unverändert. Alt-Checkout und Betriebsdaten wurden nicht berüh
 Das ist ein lokaler Container-Nachweis, kein Kubernetes- oder Remote-CI-Nachweis.
 
 Der vorhandene GitHub-Workflow wurde gelesen: `python -m pytest -q` sammelt die
-neue Testdatei automatisch im richtigen Arbeitsordner ein. Der Remote-Lauf mit
-Python 3.13 steht bis zur Freigabe von Commit/Push aus. Ein früherer grüner Lauf
-belegt die neuen Tests nicht. Das dritte Akzeptanzkriterium und die DoD-Versionierung
-bleiben deshalb offen; Story und Unteraufgaben bleiben **In Arbeit**.
+neue Testdatei automatisch im richtigen Arbeitsordner ein.
+Die Ergänzung ist mit [Commit 22b3560](https://github.com/lusaegesser/semesterarbeit-4sem/commit/22b3560378d7aad10b9e3b83d1237abbdbf2a3b3)
+auf `main` veröffentlicht. Der [GitHub-CI-Lauf 41795243957](https://github.com/lusaegesser/semesterarbeit-4sem/actions/runs/41795243957)
+mit Python 3.13 ist erfolgreich abgeschlossen. Alle vier Akzeptanzkriterien sind
+erfüllt; SEM4-7 und die Unteraufgaben SEM4-25 bis SEM4-27 sind in Jira **Erledigt**.
