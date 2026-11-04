@@ -152,6 +152,8 @@ Geplanter Release: MVP / `v0.1.0`.
 
 ## Sprint Review
 
+Zwischenstand vom 04.11.2026.
+
 | Datum | Beteiligte | Git-Stand / Release |
 | --- | --- | --- |
 | | | |
@@ -160,7 +162,7 @@ Tabelle 06: Soll-Ist-Vergleich.
 
 | Story | Erwartetes Ergebnis | Ist / Akzeptanzkriterien | Nachweis |
 | --- | --- | --- | --- |
-| P03 / SEM4-6 | Tests und CI isoliert prüfen | | |
+| P03 / SEM4-6 | Tests und CI isoliert prüfen | Abgeschlossen, 5 SP. Alle vier Akzeptanzkriterien erfüllt: 20 Tests und isolierter Container-Smoke-Test bestanden, CI erfolgreich, Abdeckung zugeordnet und Passwort-Unit-Testlücke für P04 identifiziert. | [Prüfprotokoll](../../../Fachlich/Nachweise/2026-10-27-P03-tests-ci.md); Commit `a4dc1b8`; Jira: Erledigt |
 | P04 / SEM4-7 | Testlücke schliessen | | |
 | P06 / SEM4-9 | Review und Retrospektive | | |
 
