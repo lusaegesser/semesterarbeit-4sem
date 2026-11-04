@@ -1,4 +1,4 @@
-# Projektstand – 01.11.2026
+# Projektstand – 04.11.2026
 
 ## Erledigt
 
@@ -19,14 +19,15 @@
   Passwort-Unit-Testlücke für P04 sind im [Prüfprotokoll](../Fachlich/Nachweise/2026-10-27-P03-tests-ci.md)
   dokumentiert. Tests und Workflow bleiben Vorleistung.
 
+- P03 / SEM4-6 abgeschlossen (Jira: Erledigt); Ergebnis im Sprint-1-Review erfasst.
+
 ## Offen
 
 - Repository öffentlich schalten.
 
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
 - Technische Stories umsetzen und Ergebnisse nachweisen.
-- P04 ist noch nicht umgesetzt. Die Versionierung des P03-Nachweises wurde am
-  01.11.2026 freigegeben; Abschluss mit Commit und CI-Nachweis wird in SEM4-6 verlinkt.
+- P04 ist noch nicht umgesetzt.
 
 ## Prüfungen
 
