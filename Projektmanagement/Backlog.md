@@ -21,9 +21,19 @@ geführt. Bestehende Vorgänge bleiben ohne Sprintzuordnung erhalten.
 | P10 | SEM4-13 | Deployment, Smoke-Test und Rollback | Sprint 3 | 8 | Must |
 | P11 | SEM4-14 | Datenerhalt und Restore | Sprint 3 | 8 | Must |
 | P12 | SEM4-15 | MMP und Abschlussunterlagen | Sprint 3, begleitendes PM | 5 | Must |
+| P13 | SEM4-34 | App weiterentwickeln: Orange-Schwarz-Design über die CI-/Registry-Pipeline veröffentlichen | Sprint 2, optional | 3 | Could |
+| P14 | SEM4-35 | App weiterentwickeln: Mitwirkendenkonten über die vollständige CI/CD-Pipeline ausliefern | Sprint 3, optional | 8 | Could |
 
 Abschlussfenster: 22.–27.01.2027 für Enddokumentation und Präsentation.
-Zusätzliche App-Funktionen und Hochverfügbarkeit gehören nicht zum Umfang (Won’t).
+Weitere App-Funktionen ausserhalb P13/P14 und Hochverfügbarkeit gehören nicht zum Umfang (Won’t).
+
+## Optionale App-Weiterentwicklung – Ergänzung vom 04.11.2026
+
+P13 und P14 ergänzen die App und dienen gleichzeitig als praktische Tests der
+in Sprint 2 und 3 aufgebauten Lösungen: P13 nutzt Tests, Build und Registry-Publish;
+P14 prüft die vollständige Kette bis Deployment, Smoke-Test und Rückfall.
+Beide Stories sind Could; die Must-Ziele des Antrags haben Vorrang.
+Sie werden nur bei verbleibender Kapazität umgesetzt und erweitern die Pflichtziele nicht.
 
 ## P01 – Repository und Projektgrundlagen vorbereiten
 
@@ -180,11 +190,45 @@ Akzeptanzkriterien:
 - [ ] Abgabeform, Quellen, erforderliche Hilfsmitteldeklaration und Präsentation sind nach gültigen Schulvorgaben geprüft.
 - [ ] Vollständige Git-Historie und Dateistand werden vor öffentlicher Freigabe geprüft; Sichtbarkeitswechsel bleibt separate Aktion.
 
+## P13 – App weiterentwickeln: Orange-Schwarz-Design über die CI-/Registry-Pipeline veröffentlichen
+
+Als Entwickler möchte ich die SetFlow-Oberfläche in Orange und Schwarz weiterentwickeln und über die neue Pipeline veröffentlichen, damit Tests, Build und Registry-Publish an einer echten App-Änderung überprüft werden.
+
+Sprint 2; **Story Points: 3 (vorläufig) · MoSCoW: Could**. Jira: SEM4-34.
+
+Akzeptanzkriterien:
+
+- [ ] Die Oberfläche verwendet ein abgestimmtes Orange-Schwarz-Design; Texte und Statusmeldungen bleiben gut lesbar.
+- [ ] Upload, Wiedergabe und Freigabe funktionieren weiterhin auf Desktop und Smartphone.
+- [ ] Passende Regressionstests und CI prüfen die Änderung erfolgreich.
+- [ ] Ein versioniertes Image mit nachvollziehbarem Commit und Digest wird in GHCR veröffentlicht.
+
+Nach P07; nutzt die in Sprint 2 aufgebaute CI-/Registry-Pipeline.
+
+## P14 – App weiterentwickeln: Mitwirkendenkonten über die vollständige CI/CD-Pipeline ausliefern
+
+Als Betreiber möchte ich persönliche Mitwirkendenkonten über die vollständige Pipeline ausliefern, damit die Weiterentwicklung von der Codeänderung bis zum laufenden Dienst nachvollziehbar geprüft wird.
+
+Sprint 3; **Story Points: 8 (vorläufig) · MoSCoW: Could**. Jira: SEM4-35.
+
+Akzeptanzkriterien:
+
+- [ ] Drei persönliche Konten können administrativ angelegt werden; keine öffentliche Registrierung.
+- [ ] Mitwirkende können eigene Sets hochladen, bearbeiten, löschen und mit widerrufbaren Links freigeben.
+- [ ] Sets anderer Konten können ohne Freigabe weder eingesehen noch verändert werden; das Administratorkonto kann alle Sets verwalten.
+- [ ] Passwörter werden sicher gehasht gespeichert; Tests prüfen Anmeldung, Eigentumsrechte und Freigaben.
+- [ ] Bestehende Sets bleiben bei der Datenmodelländerung erhalten; Sicherung und Migration sind geprüft.
+- [ ] Tests, Image-Publish, Helm-Deployment und Smoke-Test durchlaufen die vollständige Pipeline; Commit, Digest und Helm-Revision sind nachvollziehbar.
+- [ ] Datenerhalt und Rückfall auf die vorherige Version sind mit der Datenmodelländerung isoliert geprüft; Helm-Rollback und nötiger Datenrückfall sind getrennt beschrieben.
+
+Am Ende von Sprint 3 nach P09–P11 und den übrigen Must-Zielen; nutzt die vollständige CI/CD-Lösung.
+
 ## Abhängigkeiten
 
 Vorarbeit: P01 → P02; P05 begleitet die Einrichtung.
 Sprint 1: P03 → P04 → P06.
 P03/P04 → P07; P02 → P08; P07/P08 → P09 → P10 → P11.
+P07 → P13; P09–P11 → P14. Optionale Erweiterungen folgen den Must-Zielen.
 P12 begleitet Reviews und bündelt den Abschluss; Ergebnisse nicht erst am Ende dokumentieren.
 
 Für jede Story gilt die [Definition of Done](Definition-of-Done.md).

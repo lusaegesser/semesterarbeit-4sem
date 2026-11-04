@@ -24,6 +24,9 @@
   zu A02, insgesamt 27 Tests lokal und Container-Smoke-Test bestanden.
   Commit `22b3560`, GitHub-CI erfolgreich; [Nachweis](../Fachlich/Nachweise/2026-11-04-P04-passworttests.md).
 
+- P13 / SEM4-34 (Sprint 2, 3 SP) und P14 / SEM4-35 (Sprint 3, 8 SP) als Could
+  ergänzt: App-Weiterentwicklung als praktischer CI-/CD-Nachweis nach den Must-Zielen.
+
 ## Offen
 
 - Repository öffentlich schalten.

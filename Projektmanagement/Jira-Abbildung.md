@@ -2,7 +2,7 @@
 
 [SEM4 – Board 67](https://lukas-saegesser.atlassian.net/jira/software/projects/SEM4/boards/67/backlog)
 
-Stand: 27.10.2026. Jira führt Status und Sprintzuordnung. Priorisierung erfolgt
+Stand: 04.11.2026. Jira führt Status und Sprintzuordnung. Priorisierung erfolgt
 mit MoSCoW; Story Points beschreiben Komplexität und Unsicherheit.
 
 ## Epics
@@ -29,6 +29,8 @@ mit MoSCoW; Story Points beschreiben Komplexität und Unsicherheit.
 | P10 | SEM4-13 | C | Sprint 3 | 8 | Must |
 | P11 | SEM4-14 | C | Sprint 3 | 8 | Must |
 | P12 | SEM4-15 | A | Sprint 3, begleitendes PM | 5 | Must |
+| P13 | SEM4-34 | B | Sprint 2, optional | 3 | Could |
+| P14 | SEM4-35 | C | Sprint 3, optional | 8 | Could |
 
 Die Vorarbeit (Sprint 0) erhält keinen eigenen Jira-Sprint. Ihre bestehenden
 Vorgänge bleiben im Backlog mit dem Label `vorarbeit` erhalten.
@@ -62,3 +64,9 @@ Abhängigkeiten und Vorgangskennungen bleiben erhalten.
 Prüfung: 33 Vorgänge zurückgelesen. Sprint 1 enthält drei Stories mit neun
 Unteraufgaben; die zwölf Vorarbeitsvorgänge haben keine Sprintzuordnung.
 Die zwölf Story-Point-Schätzungen bleiben erhalten; Stundenaufwände entfallen.
+
+## Optionale Erweiterungen vom 04.11.2026
+
+SEM4-34 (P13) ist Sprint 2, SEM4-35 (P14) Sprint 3 zugeordnet. Beide sind Could
+und dienen als reale App-Änderungen zur Prüfung der neuen Pipeline. P13 folgt P07;
+P14 folgt am Ende von Sprint 3 den Must-Zielen.

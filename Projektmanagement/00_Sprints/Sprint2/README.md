@@ -12,7 +12,7 @@
 
 ## Sprint Planning
 
-**Zeitraum:** 16.11.–13.12.2026. **Stand:** 27.10.2026.
+**Zeitraum:** 16.11.–13.12.2026. **Stand:** 04.11.2026.
 **Status:** Grobplanung; Sprint in Jira vorbereitet, nicht gestartet.
 Verantwortlich: Lukas Sägesser; Begleitung: Corrado Parisi und Armin Dörzbach.
 
@@ -32,13 +32,20 @@ Tabelle 01: Vorgeschlagener Sprintumfang.
 | --- | --- | --- | ---: | --- |
 | P07 | [SEM4-10](https://lukas-saegesser.atlassian.net/browse/SEM4-10) | Tests mit versioniertem GHCR-Publish verbinden | 8 | Must |
 | P08 | [SEM4-11](https://lukas-saegesser.atlassian.net/browse/SEM4-11) | Lokale Kubernetes- und Helm-Zielumgebung vorbereiten | 8 | Must |
+| P13 | SEM4-34 | App weiterentwickeln: Orange-Schwarz-Design über die CI-/Registry-Pipeline veröffentlichen | 3 | Could |
 
 ### Schätzung und Priorisierung
 
-Der vorgeschlagene Umfang beträgt **16 Story Points**.
-Alle zugeordneten Stories sind Must-Ziele des Antrags. Der Schwerpunkt liegt auf
+Der Pflichtumfang beträgt **16 Story Points**; optional kommen **3 Story Points** hinzu.
+P13 ist eine Could-Erweiterung; die übrigen Stories sind Must-Ziele des Antrags. Der Schwerpunkt liegt auf
 technischer Umsetzung; Dokumentation, Review und Retrospektive begleiten sie.
 Die Detailplanung erfolgt vor Sprintbeginn.
+
+### Optionale App-Weiterentwicklung
+
+Ergänzung vom 04.11.2026: P13 ergänzt das Orange-Schwarz-Design und testet damit die neu aufgebaute
+Test-/Build-/Registry-Pipeline an einer echten App-Änderung. Umsetzung nach P07
+und den Must-Zielen.
 
 ## Erwartetes Commitment und DoD
 
