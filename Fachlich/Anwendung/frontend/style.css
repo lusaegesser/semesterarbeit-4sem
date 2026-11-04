@@ -30,3 +30,6 @@ audio { display: block; width: 100%; margin: 20px 0; }
 #message.error { color: #ffb5b5; }
 [hidden] { display: none !important; }
 @media (max-width: 600px) { .container { padding: 16px 14px 40px; } section, .track-card { padding: 18px; } .controls button { width: 100%; } }
+
+.brand { margin: 8px 0 16px; }
+.brand img { display: block; width: 100%; height: auto; border-radius: 12px; }

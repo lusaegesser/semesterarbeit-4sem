@@ -27,6 +27,9 @@
 - P13 / SEM4-34 (Sprint 2, 3 SP) und P14 / SEM4-35 (Sprint 3, 8 SP) als Could
   ergänzt: App-Weiterentwicklung als praktischer CI-/CD-Nachweis nach den Must-Zielen.
 
+- SetFlow-Titelbild erstellt und auf Repository-Startseite sowie im App-Kopf eingebunden.
+  Die übrige App-Gestaltung bleibt P13 in Sprint 2.
+
 ## Offen
 
 - Repository öffentlich schalten.

@@ -1,5 +1,7 @@
 # SetFlow – Semesterarbeit 4
 
+![SetFlow – Logo in Orange und Schwarz](Fachlich/Anwendung/frontend/assets/setflow-banner.png)
+
 Diese Semesterarbeit erweitert ein bestehendes DJ-Set-Archiv um eine DevOps-Pipeline.
 Automatisierte Tests, versionierte Container-Images und kontrollierte Deployments
 mit Kubernetes und Helm sollen Änderungen nachvollziehbar und reproduzierbar machen.
