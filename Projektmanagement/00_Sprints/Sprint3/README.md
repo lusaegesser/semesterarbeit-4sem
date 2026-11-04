@@ -12,7 +12,7 @@
 
 ## Sprint Planning
 
-**Zeitraum:** 14.12.2026–21.01.2027. **Stand:** 27.10.2026.
+**Zeitraum:** 14.12.2026–21.01.2027. **Stand:** 04.11.2026.
 **Status:** Grobplanung; Sprint in Jira vorbereitet, nicht gestartet.
 Verantwortlich: Lukas Sägesser; Begleitung: Corrado Parisi und Armin Dörzbach.
 
@@ -34,13 +34,20 @@ Tabelle 01: Vorgeschlagener Sprintumfang.
 | P10 | [SEM4-13](https://lukas-saegesser.atlassian.net/browse/SEM4-13) | Deployments mit Smoke-Test und Rollback nachweisen | 8 | Must |
 | P11 | [SEM4-14](https://lukas-saegesser.atlassian.net/browse/SEM4-14) | Datenerhalt und isolierten Restore nachweisen | 8 | Must |
 | P12 | [SEM4-15](https://lukas-saegesser.atlassian.net/browse/SEM4-15) | MMP und Abschlussunterlagen vorbereiten | 5 | Must |
+| P14 | SEM4-35 | App weiterentwickeln: Mitwirkendenkonten über die vollständige CI/CD-Pipeline ausliefern | 8 | Could |
 
 ### Schätzung und Priorisierung
 
-Der vorgeschlagene Umfang beträgt **26 Story Points**.
-Alle zugeordneten Stories sind Must-Ziele des Antrags. Der Schwerpunkt liegt auf
+Der Pflichtumfang beträgt **26 Story Points**; optional kommen **8 Story Points** hinzu.
+P14 ist eine Could-Erweiterung; die übrigen Stories sind Must-Ziele des Antrags. Der Schwerpunkt liegt auf
 technischer Umsetzung; Dokumentation, Review und Retrospektive begleiten sie.
 Die Detailplanung erfolgt vor Sprintbeginn.
+
+### Optionale App-Weiterentwicklung
+
+Ergänzung vom 04.11.2026: P14 ergänzt drei Mitwirkendenkonten und testet die fertige CI/CD-Lösung
+durchgängig an einer App-Weiterentwicklung. Umsetzung am Sprintende nach den
+Must-Zielen; Datenmigration und Rückfall werden zusätzlich geprüft.
 
 ## Erwartetes Commitment und DoD
 

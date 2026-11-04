@@ -70,6 +70,9 @@ Die offiziellen Form- und Bewertungsvorgaben sind noch vollständig abzugleichen
 
 Sprint 1 umfasst 12 Story Points: zwei technische Stories und begleitendes Review/Retrospektive.
 Sprint 2 und 3 werden vor ihrem Beginn verfeinert.
+Optionale App-Erweiterungen testen die neuen Lösungen praktisch: Orange-Schwarz-Design
+in Sprint 2 (P13), Mitwirkendenkonten am Ende von Sprint 3 (P14). Beide sind Could
+und folgen den Must-Zielen.
 
 ## Sprints
 
