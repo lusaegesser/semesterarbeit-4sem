@@ -1,4 +1,4 @@
-# Projektstand – 04.11.2026
+# Projektstand – 10.11.2026
 
 ## Erledigt
 
@@ -30,6 +30,12 @@
 - SetFlow-Titelbild erstellt und auf Repository-Startseite sowie im App-Kopf eingebunden.
   Die übrige App-Gestaltung bleibt P13 in Sprint 2.
 
+- Laufende Compose-App am 04.11.2026 mit SetFlow-Titelbild aktualisiert.
+  Health, Startseite und Bilddatei geprüft; bestehendes Datenvolume beibehalten.
+
+- P06: Eigenreview und Retro-Massnahme am 10.11.2026 bestätigt.
+- MVP-Demo und Release-Notes ohne Teams-Nachricht dokumentiert.
+
 ## Offen
 
 - Repository öffentlich schalten.
@@ -50,5 +56,4 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-P06 vorbereiten: MVP-Demo und Soll-Ist-Vergleich auf Basis der abgeschlossenen
-Stories P03 und P04; Review und Retrospektive tatsächlich durchführen.
+Sprint 1 in Jira separat schliessen und Sprint 2 planen. Test-Vorabcheck bei P07 anwenden.
