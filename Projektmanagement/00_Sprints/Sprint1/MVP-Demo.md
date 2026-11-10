@@ -27,8 +27,6 @@ für den geplanten technischen Mehrwert.
 ## Tatsächliche Prüfung am 10.11.2026
 
 Geprüfter versionierter Stand: `c505014ba88fe41b1d7a43c5fcacb983c06f599f`.
-Die lokalen, uncommittierten Ergänzungen zum Titelbild-Betrieb wurden nicht
-als Teil des MVP-Kandidaten bewertet.
 
 | Prüfung | Soll | Ist |
 | --- | --- | --- |
