@@ -119,7 +119,7 @@ Tabelle 04: Tasks P06.
 | Task | Beschreibung | Jira |
 | --- | --- | --- |
 | P06.1 | **MVP-Demo und Soll-Ist vorbereiten:** Anforderungsmatrix, Testergänzung und CI-Nachweis demonstrierbar machen; offene Ziele sichtbar halten. | [SEM4-31](https://lukas-saegesser.atlassian.net/browse/SEM4-31) |
-| P06.2 | **Release und Review durchführen:** v0.1.0 erst nach DoD erstellen; tatsächliches Review/Feedback und Mitteilungsentwurf dokumentieren. | [SEM4-32](https://lukas-saegesser.atlassian.net/browse/SEM4-32) |
+| P06.2 | **Release und Review durchführen:** v0.1.0 erst nach DoD erstellen; tatsächliches Review/Feedback dokumentieren. | [SEM4-32](https://lukas-saegesser.atlassian.net/browse/SEM4-32) |
 | P06.3 | **Retrospektive und Folgemassnahme festhalten:** Was lief gut/weniger gut, konkrete Verbesserung mit Verantwortlichkeit und Termin für Sprint 2 erfassen. | [SEM4-33](https://lukas-saegesser.atlassian.net/browse/SEM4-33) |
 
 ### Reihenfolge und Abhängigkeiten
@@ -152,11 +152,13 @@ Geplanter Release: MVP / `v0.1.0`.
 
 ## Sprint Review
 
-Zwischenstand vom 04.11.2026.
+Eigenreview und Retrospektive am 10.11.2026 asynchron bestätigt.
+[MVP-Demo und Ergebnisprüfung](MVP-Demo.md) dokumentieren den technischen Mehrwert.
+MVP: [v0.1.0](https://github.com/lusaegesser/semesterarbeit-4sem/releases/tag/v0.1.0).
 
 | Datum | Beteiligte | Git-Stand / Release |
 | --- | --- | --- |
-| | | |
+| 10.11.2026 | Lukas Sägesser, Eigenreview | MVP / v0.1.0 |
 
 Tabelle 06: Soll-Ist-Vergleich.
 
@@ -164,9 +166,12 @@ Tabelle 06: Soll-Ist-Vergleich.
 | --- | --- | --- | --- |
 | P03 / SEM4-6 | Tests und CI isoliert prüfen | Abgeschlossen, 5 SP. Alle vier Akzeptanzkriterien erfüllt: 20 Tests und isolierter Container-Smoke-Test bestanden, CI erfolgreich, Abdeckung zugeordnet und Passwort-Unit-Testlücke für P04 identifiziert. | [Prüfprotokoll](../../../Fachlich/Nachweise/2026-10-27-P03-tests-ci.md); Commit `a4dc1b8`; Jira: Erledigt |
 | P04 / SEM4-7 | Testlücke schliessen | Abgeschlossen, 5 SP. Sieben direkte Passwort-Testfälle ergänzt; 27 Tests lokal, Container-Smoke-Test und GitHub-CI erfolgreich. | [Prüfprotokoll](../../../Fachlich/Nachweise/2026-11-04-P04-passworttests.md); Commit `22b3560`; Jira: Erledigt |
-| P06 / SEM4-9 | Review und Retrospektive | | |
+| P06 / SEM4-9 | Review und Retrospektive | Eigenreview bestätigt, 2 SP. Demo, Soll-Ist und 27 Tests belegt; Retro-Massnahme für Sprint 2 vereinbart; MVP v0.1.0. | [MVP-Demo](MVP-Demo.md), [Release-Notes](Release-v0.1.0.md) |
 
 ### Rückmeldungen und Folgeaufgaben
+
+Technisches Ergebnis und vorbereitete Rückschau am 10.11.2026 bestätigt.
+Dozierenden-Feedback ist nicht erfasst.
 
 ### Burndown Chart
 
@@ -178,19 +183,37 @@ Tabelle 06: Soll-Ist-Vergleich.
 
 ## Sprint Retrospektive
 
+Asynchrone Eigenretrospektive am 10.11.2026 anhand der dokumentierten Durchführung bestätigt.
+
 ### Was lief gut
+
+- Die Bestandsprüfung verhinderte Doppelarbeit: 20 Tests wurden als Vorleistung
+  erkannt; P04 ergänzte gezielt sieben neue Passwortfälle.
+- Isolierte Tests und nachvollziehbare CI-Links belegen das technische Ergebnis.
 
 ### Was lief weniger gut
 
+- P03 dokumentierte Temp-Berechtigungsprobleme in der Sandbox; Teststarts
+  benötigten einen getrennten beschreibbaren Temp-Pfad und angepasste Ausführung.
+- Die Planungs-Checklisten sind noch nicht durchgehend mit dem tatsächlichen
+  Jira-Abschluss synchronisiert; die Ergebnisübersicht ist massgeblich.
+
 ### Verbesserungsideen
+
+Vor dem ersten technischen Lauf eines Sprints Interpreter, Abhängigkeiten und
+temporären Schreibpfad kurz prüfen; Ergebnis im zugehörigen Testprotokoll festhalten.
 
 Tabelle 07: Massnahmen aus der Retrospektive.
 
 | Beobachtung | Massnahme | Verantwortlich | Termin | Jira |
 | --- | --- | --- | --- | --- |
-| | | | | |
+| Temp-Berechtigungsprobleme bei P03 | Reproduzierbaren Test-Vorabcheck bei P07 dokumentieren und anwenden | Lukas Sägesser | Sprint-2-Planning, 16.11.2026 | SEM4-10 / P07 |
 
 ### Fazit
+
+Das technische Sprintziel ist erreicht. Eigenreview und Retro-Massnahme sind
+bestätigt; der MVP wird als v0.1.0 veröffentlicht. Die operative Schliessung
+des Sprints in Jira erfolgt separat.
 
 ## Abbildungsverzeichnis
 
