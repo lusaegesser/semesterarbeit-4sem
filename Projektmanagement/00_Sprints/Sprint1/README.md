@@ -14,8 +14,8 @@
 ## Sprint Planning
 
 **Thema:** Automatisierte Tests und überprüfbare CI für SetFlow.\
-**Sprint-Dauer:** 26.10.2026 bis 15.11.2026.\
-**Planungsstand:** 27.10.2026; Sprint läuft.\
+**Geplanter Zeitraum:** 26.10.2026 bis 15.11.2026.\
+**Sprintstatus:** Abgeschlossen am 10.11.2026; Jira-Schliessung ausstehend.\
 **Verantwortlich:** Lukas Sägesser.\
 **Projektmanagementdozent:** Corrado Parisi. **Fachdozent:** Armin Dörzbach.
 
@@ -59,10 +59,10 @@ Als Entwickler möchte ich den tatsächlichen Test- und CI-Stand kennen, damit i
 
 Akzeptanzkriterien:
 
-- [ ] Tests für Login, Rechte, Upload, Audio, Links, Kommentare und Backup sind zugeordnet.
-- [ ] pytest wird mit getrennten Daten ausgeführt; Datum, Commit, Soll/Ist und Ergebnis sind protokolliert.
-- [ ] GitHub-Testworkflow und Container-Smoke-Test werden geprüft; Betriebs-/Port-/Volume-Isolation ist vorher belegt.
-- [ ] Mindestens eine relevante Testlücke oder begründete Qualitätsverbesserung ist identifiziert.
+- [x] Tests für Login, Rechte, Upload, Audio, Links, Kommentare und Backup sind zugeordnet.
+- [x] pytest wird mit getrennten Daten ausgeführt; Datum, Commit, Soll/Ist und Ergebnis sind protokolliert.
+- [x] GitHub-Testworkflow und Container-Smoke-Test werden geprüft; Betriebs-/Port-/Volume-Isolation ist vorher belegt.
+- [x] Mindestens eine relevante Testlücke oder begründete Qualitätsverbesserung ist identifiziert.
 
 **Tasks**
 
@@ -82,10 +82,10 @@ Als Entwickler möchte ich eine nachgewiesene Testlücke schliessen, damit Regre
 
 Akzeptanzkriterien:
 
-- [ ] Aus P03 ist eine begründete Lücke ausgewählt und mit Antragsziel verknüpft.
-- [ ] Die Ergänzung prüft sinnvolles Verhalten inklusive passendem Fehler- oder Grenzfall.
-- [ ] Relevante Tests und CI sind erfolgreich; Änderung und Nachweis sind verlinkt.
-- [ ] Bestehende Tests werden weiterhin als Vorleistung bezeichnet.
+- [x] Aus P03 ist eine begründete Lücke ausgewählt und mit Antragsziel verknüpft.
+- [x] Die Ergänzung prüft sinnvolles Verhalten inklusive passendem Fehler- oder Grenzfall.
+- [x] Relevante Tests und CI sind erfolgreich; Änderung und Nachweis sind verlinkt.
+- [x] Bestehende Tests werden weiterhin als Vorleistung bezeichnet.
 
 **Tasks**
 
@@ -107,10 +107,10 @@ Als Projektverantwortlicher möchte ich den ersten Mehrwert prüfen und reflekti
 
 Akzeptanzkriterien:
 
-- [ ] MVP-Demo zeigt Testbasis, neue Ergänzung und CI-Nachweis; Soll/Ist ist dokumentiert.
-- [ ] Release v0.1.0 wird nur nach erfüllter DoD erstellt und verlinkt.
-- [ ] Review-Ergebnis und tatsächliches Feedback sind datiert; Review-Mitteilung wird vorbereitet.
-- [ ] Retrospektive nennt mindestens eine konkrete Massnahme für Sprint 2; keine Durchführung vorwegnehmen.
+- [x] MVP-Demo zeigt Testbasis, neue Ergänzung und CI-Nachweis; Soll/Ist ist dokumentiert.
+- [x] Release v0.1.0 wird nur nach erfüllter DoD erstellt und verlinkt.
+- [x] Review-Ergebnis und tatsächliches Feedback sind datiert; Review-Mitteilung wird vorbereitet.
+- [x] Retrospektive nennt mindestens eine konkrete Massnahme für Sprint 2; keine Durchführung vorwegnehmen.
 
 **Tasks**
 
@@ -148,7 +148,7 @@ Tabelle 05: Priorisierung.
 - Review und Retrospektive bewerten den technischen Mehrwert und liefern eine Massnahme für Sprint 2.
 
 Es gilt die gemeinsame [Definition of Done](../../Definition-of-Done.md).
-Geplanter Release: MVP / `v0.1.0`.
+Veröffentlicht: MVP / `v0.1.0`.
 
 ## Sprint Review
 
@@ -156,17 +156,19 @@ Eigenreview und Retrospektive am 10.11.2026 asynchron bestätigt.
 [MVP-Demo und Ergebnisprüfung](MVP-Demo.md) dokumentieren den technischen Mehrwert.
 MVP: [v0.1.0](https://github.com/lusaegesser/semesterarbeit-4sem/releases/tag/v0.1.0).
 
+Tabelle 06: Review-Rahmen.
+
 | Datum | Beteiligte | Git-Stand / Release |
 | --- | --- | --- |
 | 10.11.2026 | Lukas Sägesser, Eigenreview | MVP / v0.1.0 |
 
-Tabelle 06: Soll-Ist-Vergleich.
+Tabelle 07: Soll-Ist-Vergleich.
 
 | Story | Erwartetes Ergebnis | Ist / Akzeptanzkriterien | Nachweis |
 | --- | --- | --- | --- |
 | P03 / SEM4-6 | Tests und CI isoliert prüfen | Abgeschlossen, 5 SP. Alle vier Akzeptanzkriterien erfüllt: 20 Tests und isolierter Container-Smoke-Test bestanden, CI erfolgreich, Abdeckung zugeordnet und Passwort-Unit-Testlücke für P04 identifiziert. | [Prüfprotokoll](../../../Fachlich/Nachweise/2026-10-27-P03-tests-ci.md); Commit `a4dc1b8`; Jira: Erledigt |
 | P04 / SEM4-7 | Testlücke schliessen | Abgeschlossen, 5 SP. Sieben direkte Passwort-Testfälle ergänzt; 27 Tests lokal, Container-Smoke-Test und GitHub-CI erfolgreich. | [Prüfprotokoll](../../../Fachlich/Nachweise/2026-11-04-P04-passworttests.md); Commit `22b3560`; Jira: Erledigt |
-| P06 / SEM4-9 | Review und Retrospektive | Eigenreview bestätigt, 2 SP. Demo, Soll-Ist und 27 Tests belegt; Retro-Massnahme für Sprint 2 vereinbart; MVP v0.1.0. | [MVP-Demo](MVP-Demo.md), [Release-Notes](Release-v0.1.0.md) |
+| P06 / SEM4-9 | Review und Retrospektive | Abgeschlossen, 2 SP. Demo, Soll-Ist und 27 Tests belegt; Retro-Massnahme für Sprint 2 vereinbart; MVP v0.1.0. | [MVP-Demo](MVP-Demo.md), [Release-Notes](Release-v0.1.0.md) |
 
 ### Rückmeldungen und Folgeaufgaben
 
@@ -175,15 +177,41 @@ Dozierenden-Feedback ist nicht erfasst.
 
 ### Burndown Chart
 
+![Sprint-1-Burndown mit 12 erledigten und 0 ausstehenden Story Points](../../02_Bilder/2026-11-10-sprint1-burndown.png)
+
+*Abbildung 01: Jira-Sprint-Burndown, bereitgestellter Stand vom 10.11.2026.*
+
+Alle 12 Story Points sind erledigt; 0 Story Points sind ausstehend.
+Die graue Richtlinie reicht bis zum ursprünglich geplanten Sprintende am 15.11.2026.
+Die Grafik zeigt den Punkteabbau, keine geleisteten Arbeitsstunden.
+
 ### Reflexion und Learnings
+
+Die Bestandsprüfung grenzte Vorleistungen klar ab und begründete die sieben
+neuen Passwort-Testfälle. Insgesamt bestehen 27 Tests; CI und MVP-Release sind
+nachvollziehbar belegt. Die Temp-Berechtigungsprobleme zeigen, dass die
+Testumgebung vor dem ersten Lauf geprüft werden muss.
 
 ### Verbesserungsideen für kommende Sprints
 
+Bei P07 einen kurzen Test-Vorabcheck dokumentieren. Jira-Status und
+Dokumentations-Checklisten jeweils beim Story-Abschluss gemeinsam nachführen.
+
 ### Gesamtbeurteilung des Sprints
+
+**Sprintziel erreicht: 3 von 3 Stories, 12 von 12 Story Points abgeschlossen.**
+P03 prüfte die vorhandene Basis, P04 schloss die Passwort-Testlücke und P06
+bündelte Eigenreview, Retrospektive und MVP `v0.1.0`. Der dokumentierte Abschluss
+am 10.11.2026 liegt vor dem geplanten Ende am 15.11.2026. Die Jira-Schliessung
+und die Teams-Abgabe folgen separat.
 
 ## Sprint Retrospektive
 
-Asynchrone Eigenretrospektive am 10.11.2026 anhand der dokumentierten Durchführung bestätigt.
+Asynchrone Eigenretrospektive am 10.11.2026 abgeschlossen.
+
+![Starfish-Retrospektive: Beginnen, Mehr davon, Beibehalten, Weniger davon und Stoppen](../../02_Bilder/2026-11-10-sprint1-starfish.png)
+
+*Abbildung 02: Starfish-Retrospektive aus den dokumentierten Sprint-Erkenntnissen.*
 
 ### Was lief gut
 
@@ -195,15 +223,15 @@ Asynchrone Eigenretrospektive am 10.11.2026 anhand der dokumentierten Durchführ
 
 - P03 dokumentierte Temp-Berechtigungsprobleme in der Sandbox; Teststarts
   benötigten einen getrennten beschreibbaren Temp-Pfad und angepasste Ausführung.
-- Die Planungs-Checklisten sind noch nicht durchgehend mit dem tatsächlichen
-  Jira-Abschluss synchronisiert; die Ergebnisübersicht ist massgeblich.
+- Die Planungs-Checklisten wurden erst beim Sprintabschluss mit den bereits
+  abgeschlossenen Jira-Stories synchronisiert.
 
 ### Verbesserungsideen
 
 Vor dem ersten technischen Lauf eines Sprints Interpreter, Abhängigkeiten und
 temporären Schreibpfad kurz prüfen; Ergebnis im zugehörigen Testprotokoll festhalten.
 
-Tabelle 07: Massnahmen aus der Retrospektive.
+Tabelle 08: Massnahmen aus der Retrospektive.
 
 | Beobachtung | Massnahme | Verantwortlich | Termin | Jira |
 | --- | --- | --- | --- | --- |
@@ -212,10 +240,13 @@ Tabelle 07: Massnahmen aus der Retrospektive.
 ### Fazit
 
 Das technische Sprintziel ist erreicht. Eigenreview und Retro-Massnahme sind
-bestätigt; der MVP wird als v0.1.0 veröffentlicht. Die operative Schliessung
+bestätigt; der MVP ist als v0.1.0 veröffentlicht. Die operative Schliessung
 des Sprints in Jira erfolgt separat.
 
 ## Abbildungsverzeichnis
+
+- Abbildung 01: Jira-Sprint-Burndown, Stand 10.11.2026.
+- Abbildung 02: Starfish-Retrospektive aus den dokumentierten Sprint-Erkenntnissen.
 
 ## Tabellenverzeichnis
 
@@ -224,8 +255,9 @@ des Sprints in Jira erfolgt separat.
 - Tabelle 03: Tasks P04.
 - Tabelle 04: Tasks P06.
 - Tabelle 05: Priorisierung.
-- Tabelle 06: Soll-Ist-Vergleich.
-- Tabelle 07: Massnahmen aus der Retrospektive.
+- Tabelle 06: Review-Rahmen.
+- Tabelle 07: Soll-Ist-Vergleich.
+- Tabelle 08: Massnahmen aus der Retrospektive.
 
 ## Weitere Unterlagen
 
