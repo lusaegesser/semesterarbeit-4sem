@@ -77,7 +77,8 @@ und folgen den Must-Zielen.
 ## Sprints
 
 Die Sprintübersicht führt zu Planning, Review und Retrospektive.
-Das Planning für Sprint 1 ist abgeschlossen; Sprint 2 und 3 sind Grobplanungen.
+Sprint 1 einschliesslich Review und Retrospektive ist am 10.11.2026 inhaltlich
+abgeschlossen; Sprint 2 und 3 sind Grobplanungen.
 Ergebnisse und Rückmeldungen werden nach Durchführung ergänzt.
 
 ## Kommunikation und Projektverlauf

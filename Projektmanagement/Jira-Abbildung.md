@@ -50,7 +50,7 @@ Vorgänge bleiben im Backlog mit dem Label `vorarbeit` erhalten.
 
 | Sprint | Jira-ID | Zeitraum | Zustand |
 | --- | --- | --- | --- |
-| SEM4 Sprint 1 | 332 | 26.10.–15.11.2026 | Aktiv |
+| SEM4 Sprint 1 | 332 | 26.10.–15.11.2026 | Inhaltlich abgeschlossen am 10.11.; Jira-Schliessung ausstehend |
 | SEM4 Sprint 2 | 333 | 16.11.–13.12.2026 | Grobplanung |
 | SEM4 Sprint 3 | 334 | 14.12.2026–21.01.2027 | Grobplanung |
 

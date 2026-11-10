@@ -36,6 +36,9 @@
 - P06: Eigenreview und Retro-Massnahme am 10.11.2026 bestätigt.
 - MVP-Demo und Release-Notes ohne Teams-Nachricht dokumentiert.
 
+- Sprint-1-Review und Retro abgeschlossen; Burndown und Starfish eingebunden.
+  Alle drei Stories und 12 Story Points sind erledigt.
+
 ## Offen
 
 - Repository öffentlich schalten.
@@ -46,7 +49,7 @@
 ## Prüfungen
 
 Jira: 33 Vorgänge zurückgelesen; Zuordnung, Story Points und unveränderte
-Status geprüft. Sprint 1 bleibt aktiv mit drei Stories und neun Unteraufgaben.
+Status geprüft. Sprint 1 ist inhaltlich abgeschlossen: drei Stories, 12 SP; Jira-Schliessung ausstehend.
 Lokale Dokumentlinks und Änderungen auf Formatfehler geprüft.
 Abbildungen visuell geprüft; Risikowerte und Sprinttermine mit den Tabellen abgeglichen.
 
@@ -56,4 +59,4 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-Sprint 1 in Jira separat schliessen und Sprint 2 planen. Test-Vorabcheck bei P07 anwenden.
+Sprint 1 in Jira schliessen, Review/Retro über Teams abgeben und Sprint 2 planen. Test-Vorabcheck bei P07 anwenden.
