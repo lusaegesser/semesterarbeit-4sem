@@ -23,6 +23,8 @@ nachgewiesen. GitHub schützt Quellcode; es ersetzt keine Sicherung der Betriebs
 
 ![Risikomatrix mit R01 bei W3/A3, R02–R06 bei W2/A3 und R07 bei W2/A2](02_Bilder/2026-10-27-risikomatrix.png)
 
+Quelle: Eigenerstellung mit [Codex](https://openai.com/codex/), programmatisch auf Basis des Risikoregisters.
+
 *Abbildung 01: Einordnung der Risiken gemäss Risikoregister. Die Werte entsprechen der Ausgangsbewertung vor Massnahmen.*
 
 ## Abbildungsverzeichnis
