@@ -15,7 +15,7 @@
 
 **Thema:** Automatisierte Tests und überprüfbare CI für SetFlow.\
 **Geplanter Zeitraum:** 26.10.2026 bis 15.11.2026.\
-**Sprintstatus:** Abgeschlossen am 10.11.2026; Jira-Schliessung ausstehend.\
+**Sprintstatus:** Abgeschlossen am 10.11.2026; Jira-Sprint geschlossen.\
 **Verantwortlich:** Lukas Sägesser.\
 **Projektmanagementdozent:** Corrado Parisi. **Fachdozent:** Armin Dörzbach.
 
@@ -179,6 +179,8 @@ Dozierenden-Feedback ist nicht erfasst.
 
 ![Sprint-1-Burndown mit 12 erledigten und 0 ausstehenden Story Points](../../02_Bilder/2026-11-10-sprint1-burndown.png)
 
+Quelle: [Jira Sprint 1](https://lukas-saegesser.atlassian.net/jira/software/projects/SEM4/boards/67/backlog), bereitgestellter Screenshot vom 10.11.2026.
+
 *Abbildung 01: Jira-Sprint-Burndown, bereitgestellter Stand vom 10.11.2026.*
 
 Alle 12 Story Points sind erledigt; 0 Story Points sind ausstehend.
@@ -202,14 +204,15 @@ Dokumentations-Checklisten jeweils beim Story-Abschluss gemeinsam nachführen.
 **Sprintziel erreicht: 3 von 3 Stories, 12 von 12 Story Points abgeschlossen.**
 P03 prüfte die vorhandene Basis, P04 schloss die Passwort-Testlücke und P06
 bündelte Eigenreview, Retrospektive und MVP `v0.1.0`. Der dokumentierte Abschluss
-am 10.11.2026 liegt vor dem geplanten Ende am 15.11.2026. Die Jira-Schliessung
-und die Teams-Abgabe folgen separat.
+am 10.11.2026 liegt vor dem geplanten Ende am 15.11.2026. Der Sprint ist in Jira geschlossen; die Teams-Abgabe erfolgt separat.
 
 ## Sprint Retrospektive
 
 Asynchrone Eigenretrospektive am 10.11.2026 abgeschlossen.
 
 ![Starfish-Retrospektive: Beginnen, Mehr davon, Beibehalten, Weniger davon und Stoppen](../../02_Bilder/2026-11-10-sprint1-starfish.png)
+
+Quelle: Eigenerstellung mit [Codex](https://openai.com/codex/), programmatisch auf Basis der dokumentierten Retrospektive.
 
 *Abbildung 02: Starfish-Retrospektive aus den dokumentierten Sprint-Erkenntnissen.*
 
@@ -240,8 +243,7 @@ Tabelle 08: Massnahmen aus der Retrospektive.
 ### Fazit
 
 Das technische Sprintziel ist erreicht. Eigenreview und Retro-Massnahme sind
-bestätigt; der MVP ist als v0.1.0 veröffentlicht. Die operative Schliessung
-des Sprints in Jira erfolgt separat.
+bestätigt; der MVP ist als v0.1.0 veröffentlicht. Der Sprint ist auch in Jira geschlossen.
 
 ## Abbildungsverzeichnis
 

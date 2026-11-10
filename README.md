@@ -2,6 +2,8 @@
 
 ![SetFlow – Logo in Orange und Schwarz](Fachlich/Anwendung/frontend/assets/setflow-banner.png)
 
+Quelle: Eigenerstellung mit [Codex](https://openai.com/codex/) und integrierter [Bildgenerierung](https://chatgpt.com/images/).
+
 Diese Semesterarbeit erweitert ein bestehendes DJ-Set-Archiv um eine DevOps-Pipeline.
 Automatisierte Tests, versionierte Container-Images und kontrollierte Deployments
 mit Kubernetes und Helm sollen Änderungen nachvollziehbar und reproduzierbar machen.

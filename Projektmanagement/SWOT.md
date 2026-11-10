@@ -4,6 +4,8 @@ Stand: 27.10.2026. Einschätzung auf Basis der Ausgangslage und Projektplanung.
 
 ![SWOT-Analyse mit Stärken, Schwächen, Chancen und Risiken für SetFlow](02_Bilder/2026-10-27-swot.png)
 
+Quelle: Eigenerstellung mit [Codex](https://openai.com/codex/), programmatisch auf Basis der Projektplanung.
+
 *Abbildung 01: Interne Voraussetzungen und externe Einflüsse auf SetFlow.*
 
 ## Folgerungen

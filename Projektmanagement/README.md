@@ -66,6 +66,8 @@ Die offiziellen Form- und Bewertungsvorgaben sind noch vollständig abzugleichen
 
 ![Zeitachse der drei Sprints vom 26.10.2026 bis 21.01.2027](02_Bilder/2026-10-27-sprint-zeitachse.png)
 
+Quelle: Eigenerstellung mit [Codex](https://openai.com/codex/), programmatisch auf Basis der Sprintplanung.
+
 *Abbildung 01: Geplante Laufzeiten der drei Umsetzungssprints.*
 
 Sprint 1 umfasst 12 Story Points: zwei technische Stories und begleitendes Review/Retrospektive.

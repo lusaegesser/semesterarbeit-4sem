@@ -5,7 +5,7 @@
 
 Stand: 10.11.2026. Jeder Sprint erhält eine zusammenhängende Seite für Planning,
 Review und Retrospektive. Planung und tatsächlich erreichte Ergebnisse bleiben
-klar bezeichnet. Sprint 1 ist inhaltlich abgeschlossen; die Jira-Schliessung steht noch aus.
+klar bezeichnet. Sprint 1 ist inhaltlich abgeschlossen; der Jira-Sprint ist geschlossen.
 Sprint 2 und 3 sind vorbereitet.
 Die organisatorische Vorarbeit (Sprint 0) wird nicht als eigener Sprint geführt.
 
