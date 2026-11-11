@@ -71,7 +71,7 @@ Quelle: Eigenerstellung mit [Codex](https://openai.com/codex/), programmatisch a
 *Abbildung 01: Geplante Laufzeiten der drei Umsetzungssprints.*
 
 Sprint 1 umfasst 12 Story Points: zwei technische Stories und begleitendes Review/Retrospektive.
-Sprint 2 und 3 werden vor ihrem Beginn verfeinert.
+Sprint 2 ist detailliert geplant (16 SP Must, 5 SP Could); Sprint 3 wird vor Beginn verfeinert.
 Optionale App-Erweiterungen testen die neuen Lösungen praktisch: Orange-Schwarz-Design
 in Sprint 2 (P13), Mitwirkendenkonten am Ende von Sprint 3 (P14). Beide sind Could
 und folgen den Must-Zielen.
@@ -80,7 +80,7 @@ und folgen den Must-Zielen.
 
 Die Sprintübersicht führt zu Planning, Review und Retrospektive.
 Sprint 1 einschliesslich Review und Retrospektive ist am 10.11.2026 inhaltlich
-abgeschlossen; Sprint 2 und 3 sind Grobplanungen.
+abgeschlossen. Sprint 2 ist detailliert vorbereitet; Sprint 3 bleibt Grobplanung.
 Ergebnisse und Rückmeldungen werden nach Durchführung ergänzt.
 
 ## Kommunikation und Projektverlauf
