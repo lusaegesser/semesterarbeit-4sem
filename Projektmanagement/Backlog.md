@@ -1,6 +1,6 @@
 # Product Backlog
 
-Stand: 27.10.2026. Priorisierung mit MoSCoW und relative Schätzung mit Story Points; keine Stundenschätzungen.
+Stand: 11.11.2026. Priorisierung mit MoSCoW und relative Schätzung mit Story Points; keine Stundenschätzungen.
 MoSCoW beschreibt die Wichtigkeit, nicht den Aufwand. Sprint 2/3 sind Grobplanungen.
 
 Repository, Jira-Board, Backlog, Zielzuordnung und Dozentenzugriffe zählen zur
@@ -21,7 +21,7 @@ geführt. Bestehende Vorgänge bleiben ohne Sprintzuordnung erhalten.
 | P10 | SEM4-13 | Deployment, Smoke-Test und Rollback | Sprint 3 | 8 | Must |
 | P11 | SEM4-14 | Datenerhalt und Restore | Sprint 3 | 8 | Must |
 | P12 | SEM4-15 | MMP und Abschlussunterlagen | Sprint 3, begleitendes PM | 5 | Must |
-| P13 | SEM4-34 | App weiterentwickeln: Orange-Schwarz-Design über die CI-/Registry-Pipeline veröffentlichen | Sprint 2, optional | 3 | Could |
+| P13 | SEM4-34 | Design und BPM-Bereiche über CI-/Registry-Pipeline veröffentlichen | Sprint 2, optional | 5 | Could |
 | P14 | SEM4-35 | App weiterentwickeln: Mitwirkendenkonten über die vollständige CI/CD-Pipeline ausliefern | Sprint 3, optional | 8 | Could |
 
 Abschlussfenster: 22.–27.01.2027 für Enddokumentation und Präsentation.
@@ -190,20 +190,23 @@ Akzeptanzkriterien:
 - [ ] Abgabeform, Quellen, erforderliche Hilfsmitteldeklaration und Präsentation sind nach gültigen Schulvorgaben geprüft.
 - [ ] Vollständige Git-Historie und Dateistand werden vor öffentlicher Freigabe geprüft; Sichtbarkeitswechsel bleibt separate Aktion.
 
-## P13 – App weiterentwickeln: Orange-Schwarz-Design über die CI-/Registry-Pipeline veröffentlichen
+## P13 – App weiterentwickeln: Orange-Schwarz-Design und BPM-Bereiche über die CI-/Registry-Pipeline veröffentlichen
 
-Als Entwickler möchte ich die SetFlow-Oberfläche in Orange und Schwarz weiterentwickeln und über die neue Pipeline veröffentlichen, damit Tests, Build und Registry-Publish an einer echten App-Änderung überprüft werden.
+Als Nutzer möchte ich eine lesbare Orange-Schwarz-Oberfläche und BPM-Bereiche für meine Sets, damit SetFlow besser bedienbar ist und die neue Pipeline mit einer echten App-Änderung geprüft wird.
 
-Sprint 2; **Story Points: 3 (vorläufig) · MoSCoW: Could**. Jira: SEM4-34.
+Sprint 2; **Story Points: 5 (vorläufig) · MoSCoW: Could**. Jira: SEM4-34.
 
 Akzeptanzkriterien:
 
-- [ ] Die Oberfläche verwendet ein abgestimmtes Orange-Schwarz-Design; Texte und Statusmeldungen bleiben gut lesbar.
-- [ ] Upload, Wiedergabe und Freigabe funktionieren weiterhin auf Desktop und Smartphone.
-- [ ] Passende Regressionstests und CI prüfen die Änderung erfolgreich.
-- [ ] Ein versioniertes Image mit nachvollziehbarem Commit und Digest wird in GHCR veröffentlicht.
+- [ ] Orange-Schwarz-Design mit lesbaren Texten, Statusmeldungen und Fokuszuständen auf Desktop und Smartphone; SetFlow-Titelbild bleibt erhalten.
+- [ ] Einzelne BPM-Werte und aufsteigende Bereiche wie 127–150 lassen sich erfassen, speichern, bearbeiten und anzeigen; ungültige/umgekehrte Bereiche werden abgewiesen.
+- [ ] Bestehende Sets und BPM-Einzelwerte bleiben erhalten; mehrere Genres per Kommatrennung bleiben nutzbar.
+- [ ] Regressionstests prüfen BPM-Werte, Bereiche, ungültige Eingaben und bestehende Bedienabläufe.
+- [ ] Die reale App-Änderung durchläuft Tests, Build und GHCR-Publish; Commit, Lauf und Image-Digest sind dokumentiert.
 
-Nach P07; nutzt die in Sprint 2 aufgebaute CI-/Registry-Pipeline.
+Nach P07/P08 und den Must-Zielen; praktische Erprobung der CI-/Registry-Pipeline.
+Die vollständige Deploymentkette folgt in Sprint 3. BPM-Bereiche erweitern die
+frühere Design-Story; deshalb von 3 auf 5 SP neu geschätzt.
 
 ## P14 – App weiterentwickeln: Mitwirkendenkonten über die vollständige CI/CD-Pipeline ausliefern
 

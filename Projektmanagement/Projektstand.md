@@ -1,4 +1,4 @@
-# Projektstand – 10.11.2026
+# Projektstand – 11.11.2026
 
 ## Erledigt
 
@@ -41,6 +41,10 @@
 
 - Sprint 1 in Jira geschlossen; Grafikquellen unter allen eingebundenen Abbildungen ergänzt.
 
+- Sprint 2 detailliert geplant: 16 SP Must und 5 SP Could, zwölf Jira-Unteraufgaben.
+  Test-Vorabcheck aus der Retro und BPM-Bereiche in P13 berücksichtigt.
+  Zeitraum 16.11.–13.12.2026; noch nicht gestartet.
+
 ## Offen
 
 - Repository öffentlich schalten.
@@ -61,4 +65,4 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-Review/Retro über Teams abgeben und Sprint 2 planen. Test-Vorabcheck bei P07 anwenden.
+Sprint-2-Planning voraussichtlich am 16.11.2026 über Teams abgeben und Sprint in Jira starten.
