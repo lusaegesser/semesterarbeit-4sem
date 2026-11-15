@@ -2,7 +2,7 @@
 
 [SEM4 – Board 67](https://lukas-saegesser.atlassian.net/jira/software/projects/SEM4/boards/67/backlog)
 
-Stand: 11.11.2026. Jira führt Status und Sprintzuordnung. Priorisierung erfolgt
+Stand: 15.11.2026. Jira führt Status und Sprintzuordnung. Priorisierung erfolgt
 mit MoSCoW; Story Points beschreiben Komplexität und Unsicherheit.
 
 ## Epics
@@ -51,7 +51,7 @@ Vorgänge bleiben im Backlog mit dem Label `vorarbeit` erhalten.
 | Sprint | Jira-ID | Zeitraum | Zustand |
 | --- | --- | --- | --- |
 | SEM4 Sprint 1 | 332 | 26.10.–15.11.2026 | Inhaltlich abgeschlossen am 10.11.; Jira-Sprint geschlossen |
-| SEM4 Sprint 2 | 333 | 16.11.–13.12.2026 | Grobplanung |
+| SEM4 Sprint 2 | 333 | 16.11.–13.12.2026 | Planning am 15.11. abgegeben; Start am 16.11. vorgesehen |
 | SEM4 Sprint 3 | 334 | 14.12.2026–21.01.2027 | Grobplanung |
 
 ## Planungsänderung vom 27.10.2026
@@ -74,7 +74,8 @@ P14 folgt am Ende von Sprint 3 den Must-Zielen.
 ## Sprint-2-Planning vom 11.11.2026
 
 P07/P08: je 8 SP Must. P13: 5 SP Could einschliesslich BPM-Bereichen; vorher 3 SP.
-Sprint 333 bleibt vorbereitet, nicht gestartet; Zeitraum 16.11.–13.12.2026.
+Planning am 15.11.2026 über Teams abgegeben. Sprint 333 ist noch nicht gestartet;
+Jira-Start am 16.11.2026 vorgesehen. Zeitraum 16.11.–13.12.2026.
 
 | Story | Tasks | Jira-Unteraufgaben |
 | --- | --- | --- |

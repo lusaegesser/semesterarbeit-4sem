@@ -15,7 +15,8 @@
 
 **Thema:** Geprüfte Container-Images und isolierte Helm-Zielumgebung.\
 **Geplanter Zeitraum:** 16.11.2026 bis 13.12.2026.\
-**Planungsstand:** 11.11.2026; Planning vorbereitet, Sprint noch nicht gestartet.\
+**Planning-Status:** Am 15.11.2026 über Teams abgegeben.\
+**Sprintstatus:** Noch nicht gestartet; Jira-Start am 16.11.2026 vorgesehen.\
 **Verantwortlich:** Lukas Sägesser.\
 **Projektmanagementdozent:** Corrado Parisi. **Fachdozent:** Armin Dörzbach.
 

@@ -80,7 +80,8 @@ und folgen den Must-Zielen.
 
 Die Sprintübersicht führt zu Planning, Review und Retrospektive.
 Sprint 1 einschliesslich Review und Retrospektive ist am 10.11.2026 inhaltlich
-abgeschlossen. Sprint 2 ist detailliert vorbereitet; Sprint 3 bleibt Grobplanung.
+abgeschlossen. Das Sprint-2-Planning ist am 15.11.2026 über Teams abgegeben; der Jira-Start
+ist am 16.11.2026 vorgesehen. Sprint 3 bleibt Grobplanung.
 Ergebnisse und Rückmeldungen werden nach Durchführung ergänzt.
 
 ## Kommunikation und Projektverlauf
