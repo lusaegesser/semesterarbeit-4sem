@@ -69,11 +69,11 @@ Als Entwickler möchte ich geprüfte Commit-Images automatisch veröffentlichen,
 
 Akzeptanzkriterien:
 
-- [ ] Test-Vorabcheck für Interpreter, Abhängigkeiten und beschreibbaren Temp-Pfad ist dokumentiert.
-- [ ] pytest/HTTPX deckt die Antragsfälle einschliesslich Passwortprüfung und Uploadbegrenzung ab.
-- [ ] Publish erfolgt nur nach erfolgreichen Hauptbranch-Tests; Commit-Tag und Digest sind nachvollziehbar.
-- [ ] Drei erfolgreiche CI-/Publish-Läufe sind verlinkt.
-- [ ] Ein absichtlicher Testfehler verhindert die Veröffentlichung; negativer Nachweis ohne produktive Beeinträchtigung.
+- [x] Test-Vorabcheck für Interpreter, Abhängigkeiten und beschreibbaren Temp-Pfad ist dokumentiert.
+- [x] pytest/HTTPX deckt die Antragsfälle einschliesslich Passwortprüfung und Uploadbegrenzung ab.
+- [x] Publish erfolgt nur nach erfolgreichen Hauptbranch-Tests; Commit-Tag und Digest sind nachvollziehbar.
+- [x] Drei erfolgreiche CI-/Publish-Läufe sind verlinkt.
+- [x] Ein absichtlicher Testfehler verhindert die Veröffentlichung; negativer Nachweis ohne produktive Beeinträchtigung.
 
 Tabelle 02: Tasks P07.
 
