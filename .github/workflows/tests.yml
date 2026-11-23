@@ -134,6 +134,7 @@ jobs:
       packages: read
     steps:
       - name: Fehlgeschlagene Tests und gesperrten Publish prüfen
+        working-directory: ${{ runner.temp }}
         env:
           TEST_RESULT: ${{ needs.test.result }}
           CONTAINER_RESULT: ${{ needs.container.result }}
