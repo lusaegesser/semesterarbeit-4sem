@@ -71,8 +71,8 @@ Die Ergänzung ist versioniert; der verlinkte GitHub-CI-Lauf ist erfolgreich.
 
 [P07-Umsetzung vom 23.11.2026](Nachweise/2026-11-23-P07-tests-ghcr.md):
 Test-Vorabcheck, zwei Upload-Grenzfälle und GHCR-Publish nach erfolgreichen Tests
-vorbereitet. Lokal bestehen 29 Tests und der Container-Smoke-Test.
-Drei Veröffentlichungen und der negative Remote-Nachweis stehen noch aus.
+umgesetzt. 29 Tests und Container-Smoke-Test bestehen; drei echte Veröffentlichungen
+und die negative Publish-Sperre auf `main` sind mit Tags/Digests nachgewiesen.
 
 ## Betrieb und Rückfall
 

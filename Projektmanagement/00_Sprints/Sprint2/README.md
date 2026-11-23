@@ -180,7 +180,7 @@ Tabelle 07: Soll-Ist-Vergleich.
 
 | Story | Erwartetes Ergebnis | Ist / Akzeptanzkriterien | Nachweis |
 | --- | --- | --- | --- |
-| P07 / SEM4-10 | Geprüfte GHCR-Images und Publish-Sperre | In Arbeit: 29 Tests und Container-Test lokal grün, Workflow geprüft; drei Veröffentlichungen und negativer Remote-Nachweis offen. | [P07-Prüfprotokoll](../../../Fachlich/Nachweise/2026-11-23-P07-tests-ghcr.md) |
+| P07 / SEM4-10 | Geprüfte GHCR-Images und Publish-Sperre | Technisch erfüllt: 29 Tests und Container-Test erfolgreich; drei echte Veröffentlichungen, Tags/Digests und negativer Hauptbranch-Publish nachgewiesen. | [P07-Prüfprotokoll](../../../Fachlich/Nachweise/2026-11-23-P07-tests-ghcr.md) |
 | P08 / SEM4-11 | Isolierte Kubernetes-/Helm-Installation | | |
 | P13 / SEM4-34 | Optionale Design-/BPM-Änderung über Pipeline | | |
 

@@ -75,6 +75,13 @@ Netzwerkfehler beim Registry-Zugriff belegt keine fehlende Veröffentlichung.
 Das erfolgreiche Gegenstück mit `false` muss denselben Publish-Pfad einschliesslich
 Registry-Anmeldung und Image-Veröffentlichung durchlaufen.
 
+Der Job `verify-negative-publish` führt diese lesende Prüfung im negativen
+Hauptbranch-Lauf aus: Er verlangt `test=failure`, `container=success` und
+`publish=skipped`, liest zunächst den bestehenden Commit-Tag und prüft danach
+den fehlenden Versuchstag. Das Artefakt `negative-publish-evidence-…` sichert
+beide Registry-Antworten. Der gesamte Lauf bleibt wegen des absichtlichen
+pytest-Fehlers erwartungsgemäss rot; der Kontrolljob muss erfolgreich sein.
+
 Für die drei positiven Nachweise sind drei tatsächlich abgeschlossene
 Publish-Läufe erforderlich. Ein Push-Lauf und zwei manuelle positive Läufe sind
 möglich; Lauf-ID, SHA, laufbezogener Tag und Digest getrennt dokumentieren.
