@@ -8,6 +8,7 @@ abgelegt.
 - [Prüfung der Repository-Struktur vom 26.10.2026](2026-10-26-repository-struktur.md)
 - [P03: bestehende Tests und CI vom 27.10.2026](2026-10-27-P03-tests-ci.md)
 - [P04: Passwort-Unit-Tests vom 04.11.2026](2026-11-04-P04-passworttests.md)
+- [P07: Tests und GHCR-Pipeline vom 23.11.2026](2026-11-23-P07-tests-ghcr.md)
 
 Tabelle 01: Geplante Nachweisgruppen.
 

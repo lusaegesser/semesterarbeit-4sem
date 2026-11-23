@@ -1,4 +1,4 @@
-# Projektstand – 15.11.2026
+# Projektstand – 23.11.2026
 
 ## Erledigt
 
@@ -52,6 +52,12 @@
 
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
 - Technische Stories umsetzen und Ergebnisse nachweisen.
+- Sprint 2 ist in Jira aktiv (Start 16.11.2026 verifiziert).
+- P07 lokal umgesetzt: Test-Vorabcheck, zwei Upload-Grenzfälle und abhängiger
+  GHCR-Publish-Job mit Commit-/Lauf-Tags und Digest-Nachweis. 29 Tests und
+  Container-Smoke-Test bestanden; kontrollierter Fehlerlauf wie erwartet rot;
+  actionlint ohne Befund. [Prüfprotokoll](../Fachlich/Nachweise/2026-11-23-P07-tests-ghcr.md).
+  Drei echte Veröffentlichungen und negativer Publish-Nachweis fehlen noch.
 
 ## Prüfungen
 
@@ -66,4 +72,5 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-Sprint 2 am 16.11.2026 in Jira starten und mit P07 beginnen.
+P07-Änderungen prüfen und integrieren; danach drei GHCR-Läufe und die negative
+Publish-Sperre auf `main` nachweisen. Erst danach P07 abschliessen und P08 beginnen.

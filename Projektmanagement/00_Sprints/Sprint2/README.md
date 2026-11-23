@@ -16,7 +16,7 @@
 **Thema:** Geprüfte Container-Images und isolierte Helm-Zielumgebung.\
 **Geplanter Zeitraum:** 16.11.2026 bis 13.12.2026.\
 **Planning-Status:** Am 15.11.2026 über Teams abgegeben.\
-**Sprintstatus:** Noch nicht gestartet; Jira-Start am 16.11.2026 vorgesehen.\
+**Sprintstatus:** Aktiv; tatsächlicher Jira-Start am 16.11.2026.\
 **Verantwortlich:** Lukas Sägesser.\
 **Projektmanagementdozent:** Corrado Parisi. **Fachdozent:** Armin Dörzbach.
 
@@ -180,7 +180,7 @@ Tabelle 07: Soll-Ist-Vergleich.
 
 | Story | Erwartetes Ergebnis | Ist / Akzeptanzkriterien | Nachweis |
 | --- | --- | --- | --- |
-| P07 / SEM4-10 | Geprüfte GHCR-Images und Publish-Sperre | | |
+| P07 / SEM4-10 | Geprüfte GHCR-Images und Publish-Sperre | In Arbeit: 29 Tests und Container-Test lokal grün, Workflow geprüft; drei Veröffentlichungen und negativer Remote-Nachweis offen. | [P07-Prüfprotokoll](../../../Fachlich/Nachweise/2026-11-23-P07-tests-ghcr.md) |
 | P08 / SEM4-11 | Isolierte Kubernetes-/Helm-Installation | | |
 | P13 / SEM4-34 | Optionale Design-/BPM-Änderung über Pipeline | | |
 
