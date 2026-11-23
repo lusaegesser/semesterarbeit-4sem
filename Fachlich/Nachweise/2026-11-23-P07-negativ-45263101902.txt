@@ -1,0 +1,19 @@
+PASS: test=failure, container=success, publish=skipped
+Lesbare Kontrolle: ghcr.io/lusaegesser/semesterarbeit-4sem:sha-1f11eaff3f4e7ed9392564623a55d238fd3ca550
+Fehlender Versuchstag: ghcr.io/lusaegesser/semesterarbeit-4sem:sha-1f11eaff3f4e7ed9392564623a55d238fd3ca550-run-45263101902-1
+Name:      ghcr.io/lusaegesser/semesterarbeit-4sem:sha-1f11eaff3f4e7ed9392564623a55d238fd3ca550
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:808356800158441198f5c4b939a19064e9c338973fd05d638db27b143dd75293
+
+Manifests:
+  Name:        ghcr.io/lusaegesser/semesterarbeit-4sem:sha-1f11eaff3f4e7ed9392564623a55d238fd3ca550@sha256:4ee25613a70b671aca6d08f58baafb8c52c1d9c61ef2292d58d7e57f767cd6c0
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+
+  Name:        ghcr.io/lusaegesser/semesterarbeit-4sem:sha-1f11eaff3f4e7ed9392564623a55d238fd3ca550@sha256:49d84d2038ba3d62c70b7ff44b9f98effcc333ddc17a9cef7a6df08a003911df
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations:
+    vnd.docker.reference.digest: sha256:4ee25613a70b671aca6d08f58baafb8c52c1d9c61ef2292d58d7e57f767cd6c0
+    vnd.docker.reference.type:   attestation-manifest
+ERROR: ghcr.io/lusaegesser/semesterarbeit-4sem:sha-1f11eaff3f4e7ed9392564623a55d238fd3ca550-run-45263101902-1: not found

@@ -1,0 +1,9 @@
+{
+  "commit": "f577bebf736287d3652ebce283dbfe6dfed4f11b",
+  "run_url": "https://github.com/lusaegesser/semesterarbeit-4sem/actions/runs/45262149311",
+  "run_attempt": "1",
+  "image": "ghcr.io/lusaegesser/semesterarbeit-4sem",
+  "commit_tag": "ghcr.io/lusaegesser/semesterarbeit-4sem:sha-f577bebf736287d3652ebce283dbfe6dfed4f11b",
+  "run_tag": "ghcr.io/lusaegesser/semesterarbeit-4sem:sha-f577bebf736287d3652ebce283dbfe6dfed4f11b-run-45262149311-1",
+  "digest": "sha256:23c0a4c9692ca7d2de0c0a56e5059f778b98bf530e35196301b295620941c150"
+}

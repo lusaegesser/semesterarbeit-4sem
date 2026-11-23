@@ -69,11 +69,11 @@ Als Entwickler möchte ich geprüfte Commit-Images automatisch veröffentlichen,
 
 Akzeptanzkriterien:
 
-- [ ] Test-Vorabcheck für Interpreter, Abhängigkeiten und beschreibbaren Temp-Pfad ist dokumentiert.
-- [ ] pytest/HTTPX deckt die Antragsfälle einschliesslich Passwortprüfung und Uploadbegrenzung ab.
-- [ ] Publish erfolgt nur nach erfolgreichen Hauptbranch-Tests; Commit-Tag und Digest sind nachvollziehbar.
-- [ ] Drei erfolgreiche CI-/Publish-Läufe sind verlinkt.
-- [ ] Ein absichtlicher Testfehler verhindert die Veröffentlichung; negativer Nachweis ohne produktive Beeinträchtigung.
+- [x] Test-Vorabcheck für Interpreter, Abhängigkeiten und beschreibbaren Temp-Pfad ist dokumentiert.
+- [x] pytest/HTTPX deckt die Antragsfälle einschliesslich Passwortprüfung und Uploadbegrenzung ab.
+- [x] Publish erfolgt nur nach erfolgreichen Hauptbranch-Tests; Commit-Tag und Digest sind nachvollziehbar.
+- [x] Drei erfolgreiche CI-/Publish-Läufe sind verlinkt.
+- [x] Ein absichtlicher Testfehler verhindert die Veröffentlichung; negativer Nachweis ohne produktive Beeinträchtigung.
 
 Tabelle 02: Tasks P07.
 
@@ -180,7 +180,7 @@ Tabelle 07: Soll-Ist-Vergleich.
 
 | Story | Erwartetes Ergebnis | Ist / Akzeptanzkriterien | Nachweis |
 | --- | --- | --- | --- |
-| P07 / SEM4-10 | Geprüfte GHCR-Images und Publish-Sperre | In Arbeit: 29 Tests und Container-Test lokal grün, Workflow geprüft; drei Veröffentlichungen und negativer Remote-Nachweis offen. | [P07-Prüfprotokoll](../../../Fachlich/Nachweise/2026-11-23-P07-tests-ghcr.md) |
+| P07 / SEM4-10 | Geprüfte GHCR-Images und Publish-Sperre | Technisch erfüllt: 29 Tests und Container-Test erfolgreich; drei echte Veröffentlichungen, Tags/Digests und negativer Hauptbranch-Publish nachgewiesen. | [P07-Prüfprotokoll](../../../Fachlich/Nachweise/2026-11-23-P07-tests-ghcr.md) |
 | P08 / SEM4-11 | Isolierte Kubernetes-/Helm-Installation | | |
 | P13 / SEM4-34 | Optionale Design-/BPM-Änderung über Pipeline | | |
 

@@ -46,18 +46,20 @@
   Planning am 15.11.2026 über Teams abgegeben. Zeitraum 16.11.–13.12.2026;
   Jira-Start am 16.11.2026 vorgesehen.
 
-## Offen
-
-- Repository öffentlich schalten.
-
-- Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
-- Technische Stories umsetzen und Ergebnisse nachweisen.
 - Sprint 2 ist in Jira aktiv (Start 16.11.2026 verifiziert).
-- P07 lokal umgesetzt: Test-Vorabcheck, zwei Upload-Grenzfälle und abhängiger
+- P07 umgesetzt: Test-Vorabcheck, zwei Upload-Grenzfälle und abhängiger
   GHCR-Publish-Job mit Commit-/Lauf-Tags und Digest-Nachweis. 29 Tests und
   Container-Smoke-Test bestanden; kontrollierter Fehlerlauf wie erwartet rot;
   actionlint ohne Befund. [Prüfprotokoll](../Fachlich/Nachweise/2026-11-23-P07-tests-ghcr.md).
-  Drei echte Veröffentlichungen und negativer Publish-Nachweis fehlen noch.
+  Über PR #14/#15 integriert. Drei echte GHCR-Veröffentlichungen desselben Commits
+  und vollständiger negativer Hauptbranch-Nachweis mit lesbarem Kontrollimage und
+  fehlendem Versuchstag belegt. Keine zusätzlichen Berechtigungen erforderlich.
+
+## Offen
+
+- Repository öffentlich schalten.
+- Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
+- Weitere technische Stories umsetzen und Ergebnisse nachweisen.
 
 ## Prüfungen
 
@@ -72,5 +74,5 @@ Für diese Planungsänderung wurden keine Anwendungstests oder Deployments ausge
 
 ## Nächster Schritt
 
-P07-Änderungen prüfen und integrieren; danach drei GHCR-Läufe und die negative
-Publish-Sperre auf `main` nachweisen. Erst danach P07 abschliessen und P08 beginnen.
+P08 mit der isolierten Kubernetes-/Helm-Zielumgebung beginnen; ein geprüftes
+GHCR-Image aus P07 per Digest verwenden.
