@@ -69,6 +69,11 @@ Die bestehenden Tests bleiben Vorleistung.
 sieben direkte Passwort-Testfälle ergänzt; insgesamt 27 Tests lokal bestanden.
 Die Ergänzung ist versioniert; der verlinkte GitHub-CI-Lauf ist erfolgreich.
 
+[P07-Umsetzung vom 23.11.2026](Nachweise/2026-11-23-P07-tests-ghcr.md):
+Test-Vorabcheck, zwei Upload-Grenzfälle und GHCR-Publish nach erfolgreichen Tests
+vorbereitet. Lokal bestehen 29 Tests und der Container-Smoke-Test.
+Drei Veröffentlichungen und der negative Remote-Nachweis stehen noch aus.
+
 ## Betrieb und Rückfall
 
 Die übernommenen Anleitungen beziehen sich auf den bisherigen Compose-Betrieb.

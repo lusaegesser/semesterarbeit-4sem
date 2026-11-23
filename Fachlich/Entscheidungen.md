@@ -36,3 +36,17 @@ Kurze Aufgabenbranches, Conventional Commits und Pull Requests bilden den
 Änderungsprozess. Eigenprüfung und unabhängiges Review werden unterschieden.
 Releases folgen nach tatsächlicher Abnahme. Die Regeln stehen unter
 `.github/CONTRIBUTING.md`.
+
+## 23.11.2026 – Publish nach geprüften Hauptbranch Tests
+
+Der vorhandene Workflow wird um einen abhängigen GHCR-Job erweitert.
+Publish setzt erfolgreiche pytest- und Container-Jobs sowie `main` im eigenen
+Repository voraus. Nur dieser Job erhält Package-Schreibrechte; Anmeldung mit
+`GITHUB_TOKEN` statt persönlichem Token. Vollständiger Commit-Tag, laufbezogener
+Tag und Digest verbinden Quellstand, Lauf und Image. Für spätere Deployments
+ist der Digest massgeblich, da ein erneuter Build einen Commit-Tag verändern kann.
+
+Ein manueller Hauptbranch-Lauf kann einen temporären pytest-Fehler einschalten.
+Der Publish-Pfad bleibt grundsätzlich derselbe; ausschliesslich die fehlgeschlagene
+Testabhängigkeit verhindert Publish. Dadurch muss für den negativen Nachweis
+kein absichtlich defekter App-Commit in den Hauptbranch integriert werden.

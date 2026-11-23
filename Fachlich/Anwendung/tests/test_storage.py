@@ -37,6 +37,40 @@ def test_client_cannot_set_audio_path(client):
     payload = {"title": "Set", "artist": "DJ", "genre": "House", "bpm": 124, "key": "Am", "status": "Draft", "audio_file": "../../secret"}
     assert client.post("/tracks/", json=payload).json()["audio_file"] is None
 
+
+def test_upload_exactly_at_limit_is_playable(client, monkeypatch):
+    track_id = create(client)
+    monkeypatch.setattr(tracks, "MAX_UPLOAD_BYTES", 8)
+    audio = b"RIFFtest"
+
+    response = client.post(
+        f"/tracks/{track_id}/upload", files={"file": ("limit.wav", audio, "audio/wav")}
+    )
+
+    assert response.status_code == 200
+    assert client.get(f"/tracks/{track_id}/audio").content == audio
+    assert len(list(UPLOAD_DIR.iterdir())) == 1
+
+
+def test_rejected_replacement_preserves_previous_audio(client, monkeypatch):
+    track_id = create(client)
+    original = b"RIFFtest"
+    first = client.post(
+        f"/tracks/{track_id}/upload", files={"file": ("original.wav", original)}
+    )
+    assert first.status_code == 200
+    original_path = first.json()["audio_file"]
+    monkeypatch.setattr(tracks, "MAX_UPLOAD_BYTES", len(original))
+
+    response = client.post(
+        f"/tracks/{track_id}/upload", files={"file": ("too-large.wav", original + b"x")}
+    )
+
+    assert response.status_code == 413
+    assert client.get(f"/tracks/{track_id}").json()["audio_file"] == original_path
+    assert client.get(f"/tracks/{track_id}/audio").content == original
+    assert {path.name for path in UPLOAD_DIR.iterdir()} == {Path(original_path).name}
+
 def test_frontend_and_health(client):
     assert client.get("/health").json() == {"status": "ok"}
     assert "DJ Set Archive" in client.get("/").text

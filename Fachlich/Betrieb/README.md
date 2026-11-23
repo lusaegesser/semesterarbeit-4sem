@@ -5,6 +5,11 @@
 Die Anwendungs- und Containerdateien liegen unter `Fachlich/Anwendung/`.
 Die folgenden Anleitungen stammen aus dem bisherigen Compose-Betrieb.
 
+## CI und Registry
+
+[Tests und GHCR-Veröffentlichung](ci-ghcr.md) beschreibt die neue Pipeline,
+Image-Kennungen und den Nachweis der Publish-Sperre.
+
 ## Vorprojekt und historischer Betrieb
 
 | Dokument | Inhalt |
