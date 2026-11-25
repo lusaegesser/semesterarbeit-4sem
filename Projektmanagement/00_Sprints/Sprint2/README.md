@@ -27,17 +27,44 @@ Pipeline um GHCR und bereitet Kubernetes/Helm isoliert vor.
 
 ### Sprint Goal
 
-**Geprüfte Änderungen werden als Commit-gekennzeichnete GHCR-Images veröffentlicht;
-ein Testfehler sperrt Publish. Kubernetes und Helm stellen ein geprüftes Image
-isoliert bereit. Optional wird die Pipeline mit Design- und BPM-Weiterentwicklung
-erprobt.**
+**Nur getestete Images landen in GHCR und laufen isoliert per Helm.**
 
-### Schätzung und Priorität
+### Pipeline-Übersicht
 
-**16 SP Must** (P07/P08) und **5 SP Could** (P13); maximal **21 SP**.
-Die Schätzungen sind relativ und vorläufig; das verfügbare Zeitbudget ist offen.
-Task-Aufwand ist in den Stories enthalten. P13 wird erst nach den Must-Zielen
-umgesetzt. Review, Retrospektive und Nachweise begleiten die technische Arbeit.
+![Pipeline von Code über Tests, Build und GHCR zur isolierten Helm-Installation; Testfehler verhindert Publish](../../02_Bilder/2026-11-25-sprint2-pipeline.png)
+
+Quelle: Eigenerstellung mit [Codex](https://openai.com/codex/), programmatisch auf Basis der Sprintplanung.
+
+*Abbildung 01: Geplanter Ablauf von CI/Registry (P07) und isolierter Helm-Installation (P08).*
+
+Die Abbildung zeigt das Zielbild des Sprints. P07 ist bereits nachgewiesen;
+die isolierte Helm-Installation folgt mit P08. P13 nutzt die Pipeline optional
+für eine echte App-Änderung und ist kein Bestandteil des Sprintziels.
+
+### Kapazität, Schätzung und Priorität
+
+In Sprint 1 wurden **12 SP** abgeschlossen. Für Sprint 2 steht gemäss Einschätzung
+der Projektleitung ungefähr **doppelt so viel Zeit** zur Verfügung wie in Sprint 1.
+Eine belastbare Stundenangabe oder Zeiterfassung liegt dafür nicht vor.
+Der Vergleich ist eine grobe Kapazitätsschätzung und keine feste SP-Stunden-Umrechnung.
+
+**Commitment: 16 SP Must** (P07/P08). Gegenüber den 12 SP aus Sprint 1 sind das
+rund 33 % mehr Umfang bei geschätzt doppelter verfügbarer Zeit. Damit erscheint
+der Pflichtumfang als Planungsannahme realistisch; die neue Kubernetes-/Helm-
+Umgebung bleibt eine Unsicherheit. P07 mit 8 SP ist am 23.11.2026 abgeschlossen.
+
+**Optional: 5 SP Could** (P13), insgesamt höchstens **21 SP**. Das sind 75 % mehr
+als in Sprint 1. P13 folgt nur nach den Must-Zielen und bei verbleibender Kapazität;
+bei Engpässen wird die Story zurückgestellt. Review, Retrospektive und Nachweise
+werden im verbleibenden Zeitbudget berücksichtigt. Task-Aufwand ist in den Stories enthalten.
+
+### Planning-Präzisierung vom 25.11.2026
+
+Aufgrund des Dozentenfeedbacks wurden Kapazitätsvergleich, ein einzeiliges
+Sprintziel und eine Pipeline-Übersicht ergänzt. Der ursprünglich abgegebene
+Planning-Stand vom 15.11.2026 bleibt zeitlich ausgewiesen. Umfang und Prioritäten
+bleiben unverändert. Die fachliche Abstimmung zu Helm, GHCR und Pipeline mit
+Armin Dörzbach steht noch aus.
 
 ### Übernahme aus Sprint 1
 
@@ -211,6 +238,8 @@ Tabelle 08: Massnahmen aus der Retrospektive.
 ### Fazit
 
 ## Abbildungsverzeichnis
+
+- Abbildung 01: Geplanter Ablauf von CI/Registry (P07) und isolierter Helm-Installation (P08).
 
 ## Tabellenverzeichnis
 
