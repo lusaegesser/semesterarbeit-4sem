@@ -1,4 +1,4 @@
-# Projektstand – 23.11.2026
+# Projektstand – 25.11.2026
 
 ## Erledigt
 
@@ -55,7 +55,13 @@
   und vollständiger negativer Hauptbranch-Nachweis mit lesbarem Kontrollimage und
   fehlendem Versuchstag belegt. Keine zusätzlichen Berechtigungen erforderlich.
 
+- Sprint-2-Planning am 25.11.2026 aufgrund Dozentenfeedback präzisiert:
+  12 SP aus Sprint 1, geschätzt doppelte Zeit, 16 SP Must und 5 SP Could;
+  kurzes Sprintziel und Pipeline-Abbildung ergänzt.
+
 ## Offen
+
+- Helm, GHCR und Pipeline fachlich mit Armin Dörzbach abstimmen.
 
 - Repository öffentlich schalten.
 - Offizielle Form- und Bewertungsvorgaben vollständig abgleichen.
